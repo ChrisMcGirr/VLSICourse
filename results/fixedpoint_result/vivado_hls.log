@@ -1,0 +1,227 @@
+@I [LIC-101] Checked out feature [VIVADO_HLS]
+@I [HLS-10] Running '/opt/eds/Xilinx/Vivado_HLS/2014.4/bin/unwrapped/lnx64.o/vivado_hls'
+            for user 'myousaf' on host 'et4351.et.tudelft.nl' (Linux_x86_64 version 2.6.32-504.8.1.el6.x86_64) on Wed Jun 29 18:30:41 CEST 2016
+            in directory '/home/myousaf/Soc_Project'
+@I [HLS-10] Opening project '/home/myousaf/Soc_Project/fixedpoint'.
+@I [HLS-10] Adding design file '../PJ/synth/WBStructs.h' to the project
+@I [HLS-10] Adding design file '../PJ/synth/wb_slave.cpp' to the project
+@I [HLS-10] Adding design file '../PJ/synth/wb_slave.h' to the project
+@I [HLS-10] Adding test bench file '../PJ/tb' to the project
+@I [HLS-10] Opening solution '/home/myousaf/Soc_Project/fixedpoint/solution1'.
+@I [SYN-201] Setting up clock 'default' with a period of 10ns.
+@I [HLS-10] Setting target device to 'xc6slx150tfgg484-3'
+@I [SYN-201] Setting up clock 'default' with a period of 10ns.
+@I [HLS-10] Analyzing design file '../PJ/synth/wb_slave.cpp' ... 
+@I [HLS-10] Validating synthesis directives ...
+@I [HLS-10] Starting code transformations ...
+@W [SYNCHK-77] Found opaque type argument 'name' of top function 'WBSlave::WBSlave'. Possible causes are: (1) the argument is passed by reference; (2) the argument is never used in the function; (3) the argument is of templated class type. 
+@I [XFORM-603] Inlining function 'WBSlave::receive' into 'WBSlave::processBus' (../PJ/synth/wb_slave.cpp:247).
+@I [XFORM-603] Inlining function 'WBSlave::send' into 'WBSlave::processBus' (../PJ/synth/wb_slave.cpp:249).
+@I [XFORM-603] Inlining function 'WBSlave::gen_select_mask' into 'WBSlave::processBus' (../PJ/synth/wb_slave.cpp:342->../PJ/synth/wb_slave.cpp:247).
+@I [XFORM-603] Inlining function 'WBSlave::gen_select_mask' into 'WBSlave::processBus' (../PJ/synth/wb_slave.cpp:351->../PJ/synth/wb_slave.cpp:247).
+@I [XFORM-603] Inlining function 'WBSlave::gen_select_mask' into 'WBSlave::processBus' (../PJ/synth/wb_slave.cpp:365->../PJ/synth/wb_slave.cpp:249).
+@I [XFORM-603] Inlining function 'WBSlave::gen_select_mask' into 'WBSlave::processBus' (../PJ/synth/wb_slave.cpp:374->../PJ/synth/wb_slave.cpp:249).
+@I [XFORM-603] Inlining function 'ap_fixed_base<32, 16, true, (ap_q_mode)4, (ap_o_mode)2, 0>::overflow_adjust' into 'ap_fixed_base<32, 16, true, (ap_q_mode)4, (ap_o_mode)2, 0>::ap_fixed_base' ().
+@I [XFORM-603] Inlining function 'ap_fixed_base<32, 16, true, (ap_q_mode)4, (ap_o_mode)2, 0>::overflow_adjust' into 'ap_fixed_base<32, 16, true, (ap_q_mode)4, (ap_o_mode)2, 0>::ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>.1' ().
+@I [XFORM-603] Inlining function 'ap_fixed_base<32, 16, true, (ap_q_mode)4, (ap_o_mode)2, 0>::overflow_adjust' into 'ap_fixed_base<32, 16, true, (ap_q_mode)4, (ap_o_mode)2, 0>::ap_fixed_base<32, 32, false, (ap_q_mode)5, (ap_o_mode)3, 0>.1' ().
+@I [XFORM-603] Inlining function 'ap_fixed_base<21, 5, true, (ap_q_mode)4, (ap_o_mode)2, 0>::quantization_adjust' into 'ap_fixed_base<21, 5, true, (ap_q_mode)4, (ap_o_mode)2, 0>::ap_fixed_base' ().
+@I [XFORM-603] Inlining function 'ap_fixed_base<21, 5, true, (ap_q_mode)4, (ap_o_mode)2, 0>::quantization_adjust' into 'ap_fixed_base<21, 5, true, (ap_q_mode)4, (ap_o_mode)2, 0>::ap_fixed_base<53, 21, true, (ap_q_mode)5, (ap_o_mode)3, 0>' ().
+@I [XFORM-603] Inlining function 'ap_fixed_base<21, 5, true, (ap_q_mode)4, (ap_o_mode)2, 0>::quantization_adjust' into 'ap_fixed_base<21, 5, true, (ap_q_mode)4, (ap_o_mode)2, 0>::ap_fixed_base<42, 10, true, (ap_q_mode)5, (ap_o_mode)3, 0>' ().
+@I [XFORM-603] Inlining function 'ap_fixed_base<21, 5, true, (ap_q_mode)4, (ap_o_mode)2, 0>::quantization_adjust' into 'ap_fixed_base<21, 5, true, (ap_q_mode)4, (ap_o_mode)2, 0>::ap_fixed_base<75, 11, true, (ap_q_mode)5, (ap_o_mode)3, 0>.1' ().
+@I [XFORM-603] Inlining function 'ap_fixed_base<21, 5, true, (ap_q_mode)4, (ap_o_mode)2, 0>::quantization_adjust' into 'ap_fixed_base<21, 5, true, (ap_q_mode)4, (ap_o_mode)2, 0>::ap_fixed_base<65, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>' ().
+@I [XFORM-603] Inlining function 'ap_fixed_base<21, 5, true, (ap_q_mode)4, (ap_o_mode)2, 0>::quantization_adjust' into 'ap_fixed_base<21, 5, true, (ap_q_mode)4, (ap_o_mode)2, 0>::ap_fixed_base<54, 22, true, (ap_q_mode)5, (ap_o_mode)3, 0>.1' ().
+@I [XFORM-603] Inlining function 'ap_fixed_base<21, 5, true, (ap_q_mode)4, (ap_o_mode)2, 0>::quantization_adjust' into 'ap_fixed_base<21, 5, true, (ap_q_mode)4, (ap_o_mode)2, 0>::ap_fixed_base<46, 24, true, (ap_q_mode)5, (ap_o_mode)3, 0>' ().
+@I [XFORM-603] Inlining function 'ap_fixed_base<21, 5, true, (ap_q_mode)4, (ap_o_mode)2, 0>::overflow_adjust' into 'ap_fixed_base<21, 5, true, (ap_q_mode)4, (ap_o_mode)2, 0>::ap_fixed_base' ().
+@I [XFORM-603] Inlining function 'ap_fixed_base<21, 5, true, (ap_q_mode)4, (ap_o_mode)2, 0>::overflow_adjust' into 'ap_fixed_base<21, 5, true, (ap_q_mode)4, (ap_o_mode)2, 0>::ap_fixed_base<53, 21, true, (ap_q_mode)5, (ap_o_mode)3, 0>' ().
+@I [XFORM-603] Inlining function 'ap_fixed_base<21, 5, true, (ap_q_mode)4, (ap_o_mode)2, 0>::overflow_adjust' into 'ap_fixed_base<21, 5, true, (ap_q_mode)4, (ap_o_mode)2, 0>::ap_fixed_base<22, 6, true, (ap_q_mode)5, (ap_o_mode)3, 0>' ().
+@I [XFORM-603] Inlining function 'ap_fixed_base<21, 5, true, (ap_q_mode)4, (ap_o_mode)2, 0>::overflow_adjust' into 'ap_fixed_base<21, 5, true, (ap_q_mode)4, (ap_o_mode)2, 0>::ap_fixed_base<42, 10, true, (ap_q_mode)5, (ap_o_mode)3, 0>' ().
+@I [XFORM-603] Inlining function 'ap_fixed_base<21, 5, true, (ap_q_mode)4, (ap_o_mode)2, 0>::overflow_adjust' into 'ap_fixed_base<21, 5, true, (ap_q_mode)4, (ap_o_mode)2, 0>::ap_fixed_base<75, 11, true, (ap_q_mode)5, (ap_o_mode)3, 0>.1' ().
+@I [XFORM-603] Inlining function 'ap_fixed_base<21, 5, true, (ap_q_mode)4, (ap_o_mode)2, 0>::overflow_adjust' into 'ap_fixed_base<21, 5, true, (ap_q_mode)4, (ap_o_mode)2, 0>::ap_fixed_base<65, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>' ().
+@I [XFORM-603] Inlining function 'ap_fixed_base<21, 5, true, (ap_q_mode)4, (ap_o_mode)2, 0>::overflow_adjust' into 'ap_fixed_base<21, 5, true, (ap_q_mode)4, (ap_o_mode)2, 0>::ap_fixed_base<54, 22, true, (ap_q_mode)5, (ap_o_mode)3, 0>.1' ().
+@I [XFORM-603] Inlining function 'ap_fixed_base<21, 5, true, (ap_q_mode)4, (ap_o_mode)2, 0>::overflow_adjust' into 'ap_fixed_base<21, 5, true, (ap_q_mode)4, (ap_o_mode)2, 0>::ap_fixed_base<32, 16, true, (ap_q_mode)4, (ap_o_mode)2, 0>' ().
+@I [XFORM-603] Inlining function 'ap_fixed_base<21, 5, true, (ap_q_mode)4, (ap_o_mode)2, 0>::overflow_adjust' into 'ap_fixed_base<21, 5, true, (ap_q_mode)4, (ap_o_mode)2, 0>::ap_fixed_base<46, 24, true, (ap_q_mode)5, (ap_o_mode)3, 0>' ().
+@I [XFORM-603] Inlining function 'ap_fixed_base<21, 5, true, (ap_q_mode)4, (ap_o_mode)2, 0>::to_double' into 'WBSlave::getLog' (../PJ/synth/wb_slave.cpp:189).
+@I [XFORM-603] Inlining function 'ap_fixed_base<21, 5, true, (ap_q_mode)4, (ap_o_mode)2, 0>::to_double' into 'WBSlave::processSlave' (../PJ/synth/wb_slave.cpp:304).
+@I [XFORM-603] Inlining function 'ap_fixed_base<21, 5, true, (ap_q_mode)4, (ap_o_mode)2, 0>::to_double' into 'WBSlave::processSlave' (../PJ/synth/wb_slave.cpp:304).
+@I [XFORM-603] Inlining function 'ap_fixed_base<21, 5, true, (ap_q_mode)4, (ap_o_mode)2, 0>::to_double' into 'WBSlave::processSlave' (../PJ/synth/wb_slave.cpp:293).
+@I [XFORM-603] Inlining function 'ap_fixed_base<21, 5, true, (ap_q_mode)4, (ap_o_mode)2, 0>::to_double' into 'WBSlave::processSlave' (../PJ/synth/wb_slave.cpp:279).
+@I [XFORM-603] Inlining function 'ap_fixed_base<32, 16, true, (ap_q_mode)4, (ap_o_mode)2, 0>::quantization_adjust' into 'ap_fixed_base<32, 16, true, (ap_q_mode)4, (ap_o_mode)2, 0>::ap_fixed_base' ().
+@I [XFORM-603] Inlining function 'ap_fixed_base<32, 16, true, (ap_q_mode)4, (ap_o_mode)2, 0>::quantization_adjust' into 'ap_fixed_base<32, 16, true, (ap_q_mode)4, (ap_o_mode)2, 0>::ap_fixed_base<43, 11, true, (ap_q_mode)5, (ap_o_mode)3, 0>' ().
+@I [HLS-10] Checking synthesizability ...
+@W [XFORM-503] Cannot unroll loop 'Loop-1.2' (../PJ/synth/wb_slave.cpp:344) in function 'WBSlave::processBus': cannot completely unroll a loop with a variable trip count.
+@W [XFORM-503] Cannot unroll loop 'Loop-1.4' (../PJ/synth/wb_slave.cpp:353) in function 'WBSlave::processBus': cannot completely unroll a loop with a variable trip count.
+@W [XFORM-503] Cannot unroll loop 'Loop-1.6' (../PJ/synth/wb_slave.cpp:367) in function 'WBSlave::processBus': cannot completely unroll a loop with a variable trip count.
+@W [XFORM-503] Cannot unroll loop 'Loop-1.8' (../PJ/synth/wb_slave.cpp:376) in function 'WBSlave::processBus': cannot completely unroll a loop with a variable trip count.
+@W [XFORM-561] Updating loop upper bound from 256 to 255 for loop 'Loop-0-2-0' in function 'WBSlave::processSlave'.
+@I [XFORM-401] Performing if-conversion on hyperblock from (../PJ/synth/wb_slave.cpp:272:4) to (../PJ/synth/wb_slave.cpp:271:21) in function 'WBSlave::processSlave'... converting 11 basic blocks.
+@I [XFORM-401] Performing if-conversion on hyperblock from (../PJ/synth/wb_slave.cpp:280:5) to (../PJ/synth/wb_slave.cpp:286:11) in function 'WBSlave::processSlave'... converting 9 basic blocks.
+@I [XFORM-401] Performing if-conversion on hyperblock from (../PJ/synth/wb_slave.cpp:292:5) to (../PJ/synth/wb_slave.cpp:293:9) in function 'WBSlave::processSlave'... converting 7 basic blocks.
+@I [XFORM-401] Performing if-conversion on hyperblock from (../PJ/synth/wb_slave.cpp:294:6) to (../PJ/synth/wb_slave.cpp:300:12) in function 'WBSlave::processSlave'... converting 9 basic blocks.
+@I [XFORM-401] Performing if-conversion on hyperblock from (../PJ/synth/wb_slave.cpp:305:17) to (../PJ/synth/wb_slave.cpp:315:4) in function 'WBSlave::processSlave'... converting 17 basic blocks.
+@I [XFORM-401] Performing if-conversion on hyperblock from (../PJ/synth/wb_slave.cpp:215:13) to (../PJ/synth/wb_slave.cpp:217:5) in function 'WBSlave::getLog'... converting 11 basic blocks.
+@I [XFORM-401] Performing if-conversion on hyperblock from (../PJ/synth/wb_slave.cpp:218:14) to (../PJ/synth/wb_slave.cpp:218:14) in function 'WBSlave::getLog'... converting 9 basic blocks.
+@I [XFORM-401] Performing if-conversion on hyperblock from (../PJ/synth/wb_slave.cpp:221:14) to (../PJ/synth/wb_slave.cpp:221:14) in function 'WBSlave::getLog'... converting 9 basic blocks.
+@I [XFORM-401] Performing if-conversion on hyperblock from (../PJ/synth/wb_slave.cpp:198:16) to (../PJ/synth/wb_slave.cpp:204:6) in function 'WBSlave::getLog'... converting 9 basic blocks.
+@I [XFORM-401] Performing if-conversion on hyperblock from (../PJ/synth/wb_slave.cpp:211:9) to (../PJ/synth/wb_slave.cpp:214:9) in function 'WBSlave::getLog'... converting 7 basic blocks.
+@W [XFORM-561] 'Loop-1' (../PJ/synth/wb_slave.cpp:243:41) in function 'WBSlave::processBus' is an infinite loop.
+@W [XFORM-561] 'Loop-1' (../PJ/synth/wb_slave.cpp:271:7) in function 'WBSlave::processSlave' is an infinite loop.
+@W [XFORM-561] 'Loop-1' (../PJ/synth/wb_slave.cpp:189:6) in function 'WBSlave::getLog' is an infinite loop.
+@W [XFORM-562] Loop 'Loop-1.1' (../PJ/synth/wb_slave.cpp:190) in function 'WBSlave::getLog' has unknown bound because it has multiple exiting blocks.
+@I [HLS-111] Elapsed time: 18.44 seconds; current memory usage: 149 MB.
+@I [HLS-10] Starting hardware synthesis ...
+@I [SCA-201] Elaborating SystemC module 'WBSlave'.
+@I [SCA-201] Performing SystemC synthesis linting.
+@I [SCA-201] Analyzing ports and processes.
+@I [SCA-201] Found the clock port of process 'WBSlave::processBus': 'clk'.
+@I [SCA-201] Found the reset port of process 'WBSlave::processBus': 'reset'.
+@I [SCA-201] Found the clock port of process 'WBSlave::processSlave': 'clk'.
+@I [SCA-201] Found the reset port of process 'WBSlave::processSlave': 'reset'.
+@I [SCA-201] Found the clock port of process 'WBSlave::getLog': 'clk'.
+@I [SCA-201] Found the reset port of process 'WBSlave::getLog': 'reset'.
+@W [SCA-202] The reset block of process 'WBSlave::processBus' contains IO read operations (wire read on port 'WBSlave_DELAY_ADDR_V' (../PJ/synth/wb_slave.cpp:238)), which is not recommended.
+@W [SCA-202] Non-channel variable 'WBSlave_log_in_V' of module 'WBSlave' is used for inter-process communications which may result in nondeterministic simulation behavior. Please consider changing it to an sc_signal.
+@W [SCA-202] Non-channel variable 'WBSlave_log_out_V' of module 'WBSlave' is used for inter-process communications which may result in nondeterministic simulation behavior. Please consider changing it to an sc_signal.
+@W [SCA-202] Non-channel variable 'WBSlave_log_start_V' of module 'WBSlave' is used for inter-process communications which may result in nondeterministic simulation behavior. Please consider changing it to an sc_signal.
+@W [SCA-202] Found 2 SC_CTHREAD writers to variable 'WBSlave_log_start_V', there should have handshakings among the writers.
+             Process writer(1): 'WBSlave_processSlave' (SC_CTHREAD)
+             Process writer(2): 'WBSlave_getLog' (SC_CTHREAD)
+@W [SCA-202] Non-channel variable 'WBSlave_log_done_V' of module 'WBSlave' is used for inter-process communications which may result in nondeterministic simulation behavior. Please consider changing it to an sc_signal.
+@W [SCA-202] Signal 'WBSlave_CTRL_ADDR_V' has no reset.
+@W [SCA-202] Signal 'WBSlave_STAT_ADDR_V' has no reset.
+@W [SCA-202] Signal 'WBSlave_log_in_V' has no reset.
+@W [SCA-202] Signal 'WBSlave_log_out_V' has no reset.
+@W [SCA-202] Signal 'WBSlave_REG1_ADDR_V' has no reset.
+@W [SCA-202] Signal 'WBSlave_DELAY_ADDR_V' has no reset.
+@I [HLS-10] Synthesizing SystemC module [ WBSlave ]
+@I [HLS-10] Found SystemC process: 'WBSlave_getLog' 
+@I [HLS-10] Synthesizing 'WBSlave_getLog' ...
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Scheduling module 'WBSlave_getLog' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [SCHED-11] Starting scheduling ...
+@I [SCHED-11] Finished scheduling.
+@I [HLS-111] Elapsed time: 0.56 seconds; current memory usage: 150 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Exploring micro-architecture for module 'WBSlave_getLog' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [BIND-100] Starting micro-architecture generation ...
+@I [BIND-101] Performing variable lifetime analysis.
+@I [BIND-101] Exploring resource sharing.
+@I [BIND-101] Binding ...
+@I [BIND-100] Finished micro-architecture generation.
+@I [HLS-111] Elapsed time: 1.97 seconds; current memory usage: 151 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Generating RTL for module 'WBSlave_getLog' 
+@I [HLS-10] ----------------------------------------------------------------
+@W [RTGEN-101] Setting dangling out port 'WBSlave_getLog/WBSlave_log_start_V_o' to 0.
+@W [RTGEN-101] Setting dangling out port 'WBSlave_getLog/WBSlave_log_start_V_o_ap_vld' to 0.
+@I [RTGEN-100] Generating core module 'WBSlave_dcmp_64ns_64ns_1_3': 1 instance(s).
+@I [RTGEN-100] Generating core module 'WBSlave_mul_21s_21s_42_7': 1 instance(s).
+@I [RTGEN-100] Generating core module 'WBSlave_mul_31ns_21ns_44_7': 1 instance(s).
+@I [RTGEN-100] Generating core module 'WBSlave_mul_49ns_21s_69_9': 1 instance(s).
+@I [RTGEN-100] Generating core module 'WBSlave_sitodp_21ns_64_5': 1 instance(s).
+@I [RTGEN-100] Generating core module 'WBSlave_udiv_49s_5ns_49_53_seq': 1 instance(s).
+@I [RTGEN-100] Finished creating RTL model for 'WBSlave_getLog'.
+@I [HLS-111] Elapsed time: 2.24 seconds; current memory usage: 153 MB.
+@I [HLS-10] Found SystemC process: 'WBSlave_processBus' 
+@I [HLS-10] Synthesizing 'WBSlave_processBus' ...
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Scheduling module 'WBSlave_processBus' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [SCHED-11] Starting scheduling ...
+@I [SCHED-11] Finished scheduling.
+@I [HLS-111] Elapsed time: 2.85 seconds; current memory usage: 159 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Exploring micro-architecture for module 'WBSlave_processBus' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [BIND-100] Starting micro-architecture generation ...
+@I [BIND-101] Performing variable lifetime analysis.
+@I [BIND-101] Exploring resource sharing.
+@I [BIND-101] Binding ...
+@I [BIND-100] Finished micro-architecture generation.
+@I [HLS-111] Elapsed time: 1.4 seconds; current memory usage: 159 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Generating RTL for module 'WBSlave_processBus' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [RTGEN-100] Finished creating RTL model for 'WBSlave_processBus'.
+@I [HLS-111] Elapsed time: 1.48 seconds; current memory usage: 160 MB.
+@I [HLS-10] Found SystemC process: 'WBSlave_processSlave' 
+@I [HLS-10] Synthesizing 'WBSlave_processSlave' ...
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Scheduling module 'WBSlave_processSlave' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [SCHED-11] Starting scheduling ...
+@I [SCHED-11] Finished scheduling.
+@I [HLS-111] Elapsed time: 2.49 seconds; current memory usage: 165 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Exploring micro-architecture for module 'WBSlave_processSlave' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [BIND-100] Starting micro-architecture generation ...
+@I [BIND-101] Performing variable lifetime analysis.
+@I [BIND-101] Exploring resource sharing.
+@I [BIND-101] Binding ...
+@I [BIND-100] Finished micro-architecture generation.
+@I [HLS-111] Elapsed time: 0.48 seconds; current memory usage: 167 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Generating RTL for module 'WBSlave_processSlave' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [RTGEN-100] Generating core module 'WBSlave_dcmp_64ns_64ns_1_3': 2 instance(s).
+@I [RTGEN-100] Generating core module 'WBSlave_mul_21s_21s_42_7': 3 instance(s).
+@I [RTGEN-100] Generating core module 'WBSlave_sdiv_42ns_21s_42_46_seq': 1 instance(s).
+@I [RTGEN-100] Generating core module 'WBSlave_sdiv_44ns_22s_44_48_seq': 1 instance(s).
+@I [RTGEN-100] Generating core module 'WBSlave_sdiv_64ns_32s_64_68_seq': 1 instance(s).
+@I [RTGEN-100] Generating core module 'WBSlave_sitodp_21ns_64_5': 1 instance(s).
+@I [RTGEN-100] Finished creating RTL model for 'WBSlave_processSlave'.
+@I [HLS-111] Elapsed time: 0.76 seconds; current memory usage: 171 MB.
+@I [HLS-10] Synthesizing 'WBSlave' ...
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Scheduling module 'WBSlave' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [SCHED-11] Starting scheduling ...
+@I [SCHED-11] Finished scheduling.
+@I [HLS-111] Elapsed time: 1.07 seconds; current memory usage: 179 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Exploring micro-architecture for module 'WBSlave' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [BIND-100] Starting micro-architecture generation ...
+@I [BIND-101] Performing variable lifetime analysis.
+@I [BIND-101] Exploring resource sharing.
+@I [BIND-101] Binding ...
+@I [BIND-100] Finished micro-architecture generation.
+@I [HLS-111] Elapsed time: 0.17 seconds; current memory usage: 179 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Generating RTL for module 'WBSlave' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [RTGEN-500] Setting interface mode on port 'WBSlave/clk' to 'ap_none'.
+@I [RTGEN-500] Setting interface mode on port 'WBSlave/reset' to 'ap_none'.
+@I [RTGEN-500] Setting interface mode on port 'WBSlave/adr_i' to 'ap_none'.
+@I [RTGEN-500] Setting interface mode on port 'WBSlave/dat_i' to 'ap_none'.
+@I [RTGEN-500] Setting interface mode on port 'WBSlave/we_i' to 'ap_none'.
+@I [RTGEN-500] Setting interface mode on port 'WBSlave/stb_i' to 'ap_none'.
+@I [RTGEN-500] Setting interface mode on port 'WBSlave/cyc_i' to 'ap_none'.
+@I [RTGEN-500] Setting interface mode on port 'WBSlave/sel_i' to 'ap_none'.
+@I [RTGEN-500] Setting interface mode on port 'WBSlave/dat_o' to 'ap_vld'.
+@I [RTGEN-500] Setting interface mode on port 'WBSlave/ack_o' to 'ap_vld'.
+@I [RTGEN-500] Setting interface mode on port 'WBSlave/int_o' to 'ap_vld'.
+@I [RTGEN-100] Finished creating RTL model for 'WBSlave'.
+@I [HLS-111] Elapsed time: 0.44 seconds; current memory usage: 180 MB.
+@I [RTMG-282] Generating pipelined core: 'WBSlave_mul_21s_21s_42_7_MulnS_0'
+@I [RTMG-282] Generating pipelined core: 'WBSlave_udiv_49s_5ns_49_53_seq_div'
+@I [RTMG-282] Generating pipelined core: 'WBSlave_mul_49ns_21s_69_9_MulnS_1'
+@I [RTMG-282] Generating pipelined core: 'WBSlave_mul_31ns_21ns_44_7_MulnS_2'
+@I [RTMG-279] Implementing memory 'WBSlave_getLog_inputLUT_V_rom' using distributed ROMs.
+@I [RTMG-279] Implementing memory 'WBSlave_getLog_logLUT_V_rom' using distributed ROMs.
+@I [RTMG-279] Implementing memory 'WBSlave_getLog_gradientLUT_V_rom' using auto ROMs.
+@I [RTMG-279] Implementing memory 'WBSlave_getLog_offsetLUT_V_rom' using distributed ROMs.
+@I [RTMG-282] Generating pipelined core: 'WBSlave_sdiv_64ns_32s_64_68_seq_div'
+@I [RTMG-282] Generating pipelined core: 'WBSlave_sdiv_42ns_21s_42_46_seq_div'
+@I [RTMG-282] Generating pipelined core: 'WBSlave_sdiv_44ns_22s_44_48_seq_div'
+@I [RTMG-278] Implementing memory 'WBSlave_processSlave_prob_V_ram' using block RAMs.
+@I [RTMG-278] Implementing memory 'WBSlave_WBSlave_regs_ram' using distributed RAMs.
+@I [RTMG-278] Implementing memory 'WBSlave_WBSlave_PBuffer_ram' using block RAMs.
+@I [HLS-10] Finished generating all RTL models.
+@I [WSYSC-301] Generating RTL SystemC for 'WBSlave'.
+@I [WVHDL-304] Generating RTL VHDL for 'WBSlave'.
+@I [WVLOG-307] Generating RTL Verilog for 'WBSlave'.
+@I [HLS-112] Total elapsed time: 104.499 seconds; peak memory usage: 180 MB.
+@I [LIC-101] Checked in feature [VIVADO_HLS]

@@ -1,0 +1,324 @@
+================================================================
+  Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC
+  Version 2014.4
+  Build 1071461 on Tue Nov 18 16:42:57 PM 2014
+  Copyright (C) 2014 Xilinx Inc. All rights reserved.
+================================================================
+@I [LIC-101] Checked out feature [VIVADO_HLS]
+@I [HLS-10] Running '/opt/eds/Xilinx/Vivado_HLS/2014.4/bin/unwrapped/lnx64.o/vivado_hls'
+            for user 'myousaf' on host 'et4351.et.tudelft.nl' (Linux_x86_64 version 2.6.32-504.8.1.el6.x86_64) on Mon Sep 14 13:12:32 CEST 2015
+            in directory '/home/myousaf/PJ'
+@I [HLS-10] Creating and opening project '/home/myousaf/PJ/VLSIProject'.
+@I [HLS-10] Adding design file '/home/myousaf/PJ/synth/WBStructs.h' to the project
+@W [HLS-40] Cannot find design file '/home/myousaf/PJ/synth/sc_otsu.cpp'
+@W [HLS-40] Cannot find design file '/home/myousaf/PJ/synth/sc_otsu.h'
+@I [HLS-10] Adding design file '/home/myousaf/PJ/synth/wb_slave.cpp' to the project
+@I [HLS-10] Adding design file '/home/myousaf/PJ/synth/wb_slave.h' to the project
+@I [HLS-10] Adding test bench file '/home/myousaf/PJ/tb/WBBridgeStructs.h' to the project
+@I [HLS-10] Adding test bench file '/home/myousaf/PJ/tb/WBParameters.h' to the project
+@I [HLS-10] Adding test bench file '/home/myousaf/PJ/tb/file.cpp' to the project
+@I [HLS-10] Adding test bench file '/home/myousaf/PJ/tb/file.h' to the project
+@I [HLS-10] Adding test bench file '/home/myousaf/PJ/tb/tb_init.cpp' to the project
+@I [HLS-10] Adding test bench file '/home/myousaf/PJ/tb/tb_init.h' to the project
+@I [HLS-10] Adding test bench file '/home/myousaf/PJ/tb/top.cpp' to the project
+@I [HLS-10] Adding test bench file '/home/myousaf/PJ/tb/wb.cpp' to the project
+@I [HLS-10] Adding test bench file '/home/myousaf/PJ/tb/wb.h' to the project
+@I [HLS-10] Adding test bench file '/home/myousaf/PJ/tb/bmp/EasyBMP_BMP.h' to the project
+@I [HLS-10] Adding test bench file '/home/myousaf/PJ/tb/bmp/EasyBMP_DataStructures.h' to the project
+@I [HLS-10] Adding test bench file '/home/myousaf/PJ/tb/bmp/EasyBMP_VariousBMPutilities.h' to the project
+@I [HLS-10] Adding test bench file '/home/myousaf/PJ/tb/bmp/EasyBMP.h' to the project
+@I [HLS-10] Adding test bench file '/home/myousaf/PJ/tb/bmp/EasyBMP.cpp' to the project
+@I [HLS-10] Creating and opening solution '/home/myousaf/PJ/VLSIProject/solution1'.
+@I [HLS-10] Setting target device to 'xc6slx150tfgg484-3'
+@I [SYN-201] Setting up clock 'default' with a period of 10ns.
+   Compiling ../../../../tb/bmp/EasyBMP.cpp in release mode
+   Compiling ../../../../tb/wb.cpp in release mode
+   Compiling ../../../../tb/top.cpp in release mode
+   Compiling ../../../../tb/tb_init.cpp in release mode
+   Compiling ../../../../tb/file.cpp in release mode
+   Compiling ../../../../synth/wb_slave.cpp in release mode
+   Generating csim.exe
+
+             SystemC 2.3.0-ASI --- May 15 2013 06:32:03
+        Copyright (c) 1996-2012 by all Contributors,
+        ALL RIGHTS RESERVED
+
+0 0 s
+WARNING: Default time step is used for VCD tracing.
+1 20 ns
+0
+1
+2
+3
+4
+XRAM[10] = 0x1101001
+XRAM[0] = 0x1020304
+XRAM[5] = 0
+XRAM[40] = 0x40040440
+@I [SIM-1] CSim done with 0 errors.
+@I [HLS-10] Analyzing design file '/home/myousaf/PJ/synth/wb_slave.cpp' ... 
+@W [HLS-40] Cannot find source file /home/myousaf/PJ/synth/sc_otsu.h; skipping it.
+@W [HLS-40] Cannot find source file /home/myousaf/PJ/synth/sc_otsu.cpp; skipping it.
+@I [HLS-10] Validating synthesis directives ...
+@I [HLS-10] Starting code transformations ...
+@W [XFORM-503] Ignored unroll directive 'Loop-1.1' (/home/myousaf/PJ/synth/wb_slave.cpp:45) in function 'WBSlave::processSlave()': multiple loop unroll directives in one loop, use the first one and ignore the rest.
+@W [SYNCHK-77] Found opaque type argument 'name' of top function 'WBSlave::WBSlave'. Possible causes are: (1) the argument is passed by reference; (2) the argument is never used in the function; (3) the argument is of templated class type. 
+@I [XFORM-603] Inlining function 'WBSlave::receive' into 'WBSlave::processBus' (/home/myousaf/PJ/synth/wb_slave.cpp:31).
+@I [XFORM-603] Inlining function 'WBSlave::send' into 'WBSlave::processBus' (/home/myousaf/PJ/synth/wb_slave.cpp:33).
+@I [XFORM-603] Inlining function 'WBSlave::gen_select_mask' into 'WBSlave::processBus' (/home/myousaf/PJ/synth/wb_slave.cpp:65->/home/myousaf/PJ/synth/wb_slave.cpp:31).
+@I [XFORM-603] Inlining function 'WBSlave::gen_select_mask' into 'WBSlave::processBus' (/home/myousaf/PJ/synth/wb_slave.cpp:80->/home/myousaf/PJ/synth/wb_slave.cpp:33).
+@I [HLS-10] Checking synthesizability ...
+@W [XFORM-503] Cannot unroll loop 'Loop-1.2' (/home/myousaf/PJ/synth/wb_slave.cpp:68) in function 'WBSlave::processBus': cannot completely unroll a loop with a variable trip count.
+@W [XFORM-503] Cannot unroll loop 'Loop-1.4' (/home/myousaf/PJ/synth/wb_slave.cpp:84) in function 'WBSlave::processBus': cannot completely unroll a loop with a variable trip count.
+@I [XFORM-501] Unrolling loop 'Loop-1.1' (/home/myousaf/PJ/synth/wb_slave.cpp:45) in function 'WBSlave::processSlave' completely.
+@W [XFORM-561] 'Loop-1' (/home/myousaf/PJ/synth/wb_slave.cpp:27:41) in function 'WBSlave::processBus' is an infinite loop.
+@W [XFORM-561] 'Loop-1' (/home/myousaf/PJ/synth/wb_slave.cpp:56:5) in function 'WBSlave::processSlave' is an infinite loop.
+@I [HLS-111] Elapsed time: 9.44 seconds; current memory usage: 88.3 MB.
+@I [HLS-10] Starting hardware synthesis ...
+@I [SCA-201] Elaborating SystemC module 'WBSlave'.
+@I [SCA-201] Performing SystemC synthesis linting.
+@I [SCA-201] Analyzing ports and processes.
+@I [SCA-201] Found the clock port of process 'WBSlave::processBus': 'clk'.
+@I [SCA-201] Found the reset port of process 'WBSlave::processBus': 'reset'.
+@I [SCA-201] Found the clock port of process 'WBSlave::processSlave': 'clk'.
+@I [SCA-201] Found the reset port of process 'WBSlave::processSlave': 'reset'.
+@W [SCA-202] The reset block of process 'WBSlave::processBus' contains IO read operations (wire read on port 'WBSlave_DELAY_ADDR_V' (/home/myousaf/PJ/synth/wb_slave.cpp:22)), which is not recommended.
+@W [SCA-202] Signal 'WBSlave_CTRL_ADDR_V' has no reset.
+@W [SCA-202] Signal 'WBSlave_STAT_ADDR_V' has no reset.
+@W [SCA-202] Signal 'WBSlave_DELAY_ADDR_V' has no reset.
+@I [HLS-10] Synthesizing SystemC module [ WBSlave ]
+@I [HLS-10] Found SystemC process: 'WBSlave_processBus' 
+@I [HLS-10] Synthesizing 'WBSlave_processBus' ...
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Scheduling module 'WBSlave_processBus' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [SCHED-11] Starting scheduling ...
+@I [SCHED-11] Finished scheduling.
+@I [HLS-111] Elapsed time: 0.24 seconds; current memory usage: 88.9 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Exploring micro-architecture for module 'WBSlave_processBus' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [BIND-100] Starting micro-architecture generation ...
+@I [BIND-101] Performing variable lifetime analysis.
+@I [BIND-101] Exploring resource sharing.
+@I [BIND-101] Binding ...
+@I [BIND-100] Finished micro-architecture generation.
+@I [HLS-111] Elapsed time: 0.21 seconds; current memory usage: 89.5 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Generating RTL for module 'WBSlave_processBus' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [RTGEN-100] Finished creating RTL model for 'WBSlave_processBus'.
+@I [HLS-111] Elapsed time: 0.28 seconds; current memory usage: 90.1 MB.
+@I [HLS-10] Found SystemC process: 'WBSlave_processSlave' 
+@I [HLS-10] Synthesizing 'WBSlave_processSlave' ...
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Scheduling module 'WBSlave_processSlave' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [SCHED-11] Starting scheduling ...
+@I [SCHED-11] Finished scheduling.
+@I [HLS-111] Elapsed time: 0.43 seconds; current memory usage: 92.4 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Exploring micro-architecture for module 'WBSlave_processSlave' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [BIND-100] Starting micro-architecture generation ...
+@I [BIND-101] Performing variable lifetime analysis.
+@I [BIND-101] Exploring resource sharing.
+@I [BIND-101] Binding ...
+@I [BIND-100] Finished micro-architecture generation.
+@I [HLS-111] Elapsed time: 0.03 seconds; current memory usage: 92.6 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Generating RTL for module 'WBSlave_processSlave' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [RTGEN-100] Finished creating RTL model for 'WBSlave_processSlave'.
+@I [HLS-111] Elapsed time: 0.04 seconds; current memory usage: 92.8 MB.
+@I [HLS-10] Synthesizing 'WBSlave' ...
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Scheduling module 'WBSlave' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [SCHED-11] Starting scheduling ...
+@I [SCHED-11] Finished scheduling.
+@I [HLS-111] Elapsed time: 0.09 seconds; current memory usage: 93.4 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Exploring micro-architecture for module 'WBSlave' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [BIND-100] Starting micro-architecture generation ...
+@I [BIND-101] Performing variable lifetime analysis.
+@I [BIND-101] Exploring resource sharing.
+@I [BIND-101] Binding ...
+@I [BIND-100] Finished micro-architecture generation.
+@I [HLS-111] Elapsed time: 0.02 seconds; current memory usage: 93.6 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Generating RTL for module 'WBSlave' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [RTGEN-500] Setting interface mode on port 'WBSlave/clk' to 'ap_none'.
+@I [RTGEN-500] Setting interface mode on port 'WBSlave/reset' to 'ap_none'.
+@I [RTGEN-500] Setting interface mode on port 'WBSlave/adr_i' to 'ap_none'.
+@I [RTGEN-500] Setting interface mode on port 'WBSlave/dat_i' to 'ap_none'.
+@I [RTGEN-500] Setting interface mode on port 'WBSlave/we_i' to 'ap_none'.
+@I [RTGEN-500] Setting interface mode on port 'WBSlave/stb_i' to 'ap_none'.
+@I [RTGEN-500] Setting interface mode on port 'WBSlave/cyc_i' to 'ap_none'.
+@I [RTGEN-500] Setting interface mode on port 'WBSlave/sel_i' to 'ap_none'.
+@I [RTGEN-500] Setting interface mode on port 'WBSlave/dat_o' to 'ap_vld'.
+@I [RTGEN-500] Setting interface mode on port 'WBSlave/ack_o' to 'ap_vld'.
+@I [RTGEN-500] Setting interface mode on port 'WBSlave/int_o' to 'ap_vld'.
+@I [RTGEN-100] Finished creating RTL model for 'WBSlave'.
+@I [HLS-111] Elapsed time: 0.05 seconds; current memory usage: 93.9 MB.
+@I [RTMG-278] Implementing memory 'WBSlave_WBSlave_regs_ram' using distributed RAMs.
+@I [HLS-10] Finished generating all RTL models.
+@I [WSYSC-301] Generating RTL SystemC for 'WBSlave'.
+@I [WVHDL-304] Generating RTL VHDL for 'WBSlave'.
+@I [WVLOG-307] Generating RTL Verilog for 'WBSlave'.
+@I [SIM-47] Using Modelsim for RTL simulation.
+@I [SIM-2] Generating simulation wrapper in SystemC ...
+   Build using "/opt/eds/Xilinx/Vivado_HLS/2014.4/lnx64/tools/gcc/bin/g++"
+   Compiling EasyBMP.cpp
+   Compiling file.cpp
+   Compiling tb_init.cpp
+   Compiling top.cpp
+   Compiling wb.cpp
+   Compiling WBSlave.cpp
+   Compiling WBSlave_processBus.cpp
+   Compiling WBSlave_processSlave.cpp
+   Generating cosim.sc.exe
+@I [SIM-12] Generating RTL test bench ...
+@I [SIM-11] Starting SystemC simulation ...
+
+             SystemC 2.3.0-ASI --- May 15 2013 06:32:03
+        Copyright (c) 1996-2012 by all Contributors,
+        ALL RIGHTS RESERVED
+
+Note: VCD trace timescale unit is set by user to 1.000000e-12 sec.
+Note: VCD trace timescale unit is set by user to 1.000000e-12 sec.
+Note: VCD trace timescale unit is set by user to 1.000000e-12 sec.
+0 0 s
+WARNING: Default time step is used for VCD tracing.
+1 20 ns
+0
+1
+2
+3
+4
+XRAM[10] = 0x1101001
+XRAM[0] = 0x1020304
+XRAM[5] = 0
+XRAM[40] = 0x40040440
+@I [SIM-322] Starting VHDL simulation. 
+@I [SIM-15] Starting Modelsim ...
+Reading /opt/eds/modeltech/10.1/tcl/vsim/pref.tcl 
+
+# 10.1
+
+# do cosim.modelsim.scr 
+# 
+#     set fl [open ".exit.err" w]
+#     puts $fl "Elaboration errors in executing modelsim simulator"
+#     close $fl
+#     quit
+# 
+# /opt/clibs
+# lin64
+# 1
+# /opt/clibs/questa/10.1/lin64/lib
+WARNING: There is no IP libs for this version of ModelSim. If you may use cosim with IP, please make sure the IP libs have been pre-compiled.
+# Copying /opt/eds/modeltech/10.1/linux/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied /opt/eds/modeltech/10.1/linux/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# Model Technology ModelSim SE vcom 10.1 Compiler 2011.12 Dec  5 2011
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package NUMERIC_STD
+# -- Compiling package AESL_sim_components
+# -- Compiling package body AESL_sim_components
+# -- Loading package AESL_sim_components
+# Model Technology ModelSim SE vcom 10.1 Compiler 2011.12 Dec  5 2011
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package NUMERIC_STD
+# -- Loading package AESL_sim_components
+# -- Compiling entity AUTOTB_TOP
+# -- Compiling architecture behavior of AUTOTB_TOP
+# Model Technology ModelSim SE vcom 10.1 Compiler 2011.12 Dec  5 2011
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity WBSlave
+# -- Compiling architecture behav of WBSlave
+# Model Technology ModelSim SE vcom 10.1 Compiler 2011.12 Dec  5 2011
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity WBSlave_processBus
+# -- Compiling architecture behav of WBSlave_processBus
+# Model Technology ModelSim SE vcom 10.1 Compiler 2011.12 Dec  5 2011
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity WBSlave_WBSlave_regs_ram
+# -- Compiling architecture rtl of WBSlave_WBSlave_regs_ram
+# ** Warning: WBSlave_WBSlave_regs.vhd(41): (vcom-1236) Shared variables must be of a protected type.
+# -- Compiling entity WBSlave_WBSlave_regs
+# -- Compiling architecture arch of WBSlave_WBSlave_regs
+# Model Technology ModelSim SE vcom 10.1 Compiler 2011.12 Dec  5 2011
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity WBSlave_processSlave
+# -- Compiling architecture behav of WBSlave_processSlave
+# vsim -L work -suppress 6630 -t 10ps -wlf WBSlave.wlf -novopt AUTOTB_TOP 
+# //  ModelSim SE 10.1 Dec  5 2011 Linux 2.6.32-504.8.1.el6.x86_64
+# //
+# //  Copyright 1991-2011 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# Loading std.standard
+# Refreshing /home/myousaf/PJ/VLSIProject/solution1/sim/vhdl/work.autotb_top(behavior)
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Refreshing /home/myousaf/PJ/VLSIProject/solution1/sim/vhdl/work.aesl_sim_components(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.numeric_std(body)
+# Loading work.aesl_sim_components(body)
+# Loading work.autotb_top(behavior)
+# Refreshing /home/myousaf/PJ/VLSIProject/solution1/sim/vhdl/work.wbslave(behav)
+# Loading work.wbslave(behav)
+# Refreshing /home/myousaf/PJ/VLSIProject/solution1/sim/vhdl/work.wbslave_wbslave_regs(arch)
+# Loading work.wbslave_wbslave_regs(arch)
+# Refreshing /home/myousaf/PJ/VLSIProject/solution1/sim/vhdl/work.wbslave_wbslave_regs_ram(rtl)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.wbslave_wbslave_regs_ram(rtl)
+# Refreshing /home/myousaf/PJ/VLSIProject/solution1/sim/vhdl/work.wbslave_processslave(behav)
+# Loading work.wbslave_processslave(behav)
+# Refreshing /home/myousaf/PJ/VLSIProject/solution1/sim/vhdl/work.wbslave_processbus(behav)
+# Loading work.wbslave_processbus(behav)
+# 1
+# 1
+# ** Note: simulation done!
+#    Time: 5445 ns  Iteration: 0  Instance: /autotb_top
+# ** Failure: NORMAL EXIT (note: failure is to force the simulator to stop)
+#    Time: 5445 ns  Iteration: 0  Process: /autotb_top/proc_tv_out File: WBSlave.autotb.vhd
+# Break in Process proc_tv_out at WBSlave.autotb.vhd line 562
+@I [SIM-301] Simulation FAILED with 110 mismatches detected. 
+@E [SIM-4] *** C/RTL co-simulation finished: FAIL ***
+command 'ap_source' returned error code
+    while executing
+"source [lindex $::argv 1] "
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel \#0 { source [lindex $::argv 1] } "
+
+@I [HLS-112] Total elapsed time: 131.768 seconds; peak memory usage: 93.9 MB.
+@I [LIC-101] Checked in feature [VIVADO_HLS]

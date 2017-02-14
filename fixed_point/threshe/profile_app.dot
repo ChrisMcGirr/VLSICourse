@@ -1,0 +1,29 @@
+digraph "callgraph" {
+  F2913038 [label="operator new[](unsigned long)\n61 719"];
+  F2913368 [label="operator new(unsigned long)\n60 938"];
+  F2913d48 [label="malloc\n59 025"];
+  F2948d48 [label="(below main)\n4 818 882"];
+  F294a998 [label="main\n4 818 882"];
+  F29ac4e8 [label="BMP::Read8bitRow(unsigned char...\n104 348"];
+  F29addd8 [label="BMP::BMP()\n62 563"];
+  F29af748 [label="BMP::ReadFromFile(char const*)\n196 235"];
+  F29b3d28 [label="0x0000000000401326\n4 818 882"];
+  F29b4698 [label="outThresh(int, int, int, BMP*,...\n81 764"];
+  F29b4f18 [label="makeHist(long*, BMP*, int, int...\n56 501"];
+  F29b6ea8 [label="findThresh(long*, int, int, do...\n4 357 869"];
+  F29b7e38 [label="log\n3 813 070"];
+  F2a395c8 [label="__ieee754_log_sse2\n3 695 465"];
+  F2913038 -> F2913368 [weight=2,label="60 938 (59x)"];
+  F2913368 -> F2913d48 [weight=2,label="59 025 (59x)"];
+  F2948d48 -> F294a998 [weight=2,label="4 818 882 (1x)"];
+  F294a998 -> F29addd8 [weight=2,label="62 563 (2x)"];
+  F294a998 -> F29af748 [weight=2,label="196 235 (1x)"];
+  F294a998 -> F29b4698 [weight=2,label="81 764 (1x)"];
+  F294a998 -> F29b4f18 [weight=2,label="56 501 (1x)"];
+  F294a998 -> F29b6ea8 [weight=2,label="4 357 869 (1x)"];
+  F29addd8 -> F2913038 [weight=2,label="61 719 (4x)"];
+  F29af748 -> F29ac4e8 [weight=2,label="104 348 (38x)"];
+  F29b3d28 -> F2948d48 [weight=2,label="4 818 882 (1x)"];
+  F29b6ea8 -> F29b7e38 [weight=2,label="3 813 070 (23 521x)"];
+  F29b7e38 -> F2a395c8 [weight=2,label="3 695 465 (23 521x)"];
+}

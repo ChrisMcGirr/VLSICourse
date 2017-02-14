@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="WBStructs.h" path="/home/myousaf/PJ/synth/WBStructs.h"/>
+    <originFiles name="wb_slave.cpp" path="/home/myousaf/PJ/synth/wb_slave.cpp"/>
+    <originFiles name="wb_slave.h" path="/home/myousaf/PJ/synth/wb_slave.h"/>
+  </source>
+  <testbench>
+    <originFiles name="tb" path="/home/myousaf/PJ/tb"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

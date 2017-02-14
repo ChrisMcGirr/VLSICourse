@@ -1,0 +1,383 @@
+
+
+================================================================
+== Vivado HLS Report for 'WBSlave'
+================================================================
+* Date:           Wed Jun 29 18:15:46 2016
+
+* Version:        2014.4 (Build 1071461 on Tue Nov 18 16:42:57 PM 2014)
+* Project:        floatpoint
+* Solution:       solution1
+* Product family: spartan6
+* Target device:  xc6slx150tfgg484-3
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +---------+-------+----------+------------+
+    |  Clock  | Target| Estimated| Uncertainty|
+    +---------+-------+----------+------------+
+    |default  |  10.00|      8.53|        1.25|
+    +---------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    ?|    ?|    ?|    ?|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48A|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|Expression       |        -|      -|       -|      -|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        -|      -|       -|      -|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|      -|
+|Register         |        -|      -|       -|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |        0|      0|       0|      0|
++-----------------+---------+-------+--------+-------+
+|Available        |      268|    180|  184304|  92152|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        0|      0|       0|      0|
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
+N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 5
+* Pipeline: 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	5  / (WBSlave_ssdm_thread_M_proce)
+	4  / (!WBSlave_ssdm_thread_M_proce & WBSlave_ssdm_thread_M_proce_1)
+	2  / (!WBSlave_ssdm_thread_M_proce & !WBSlave_ssdm_thread_M_proce_1 & WBSlave_ssdm_thread_M_getLo)
+2 --> 
+	3  / true
+3 --> 
+4 --> 
+	3  / true
+5 --> 
+	3  / true
+* FSM state operations: 
+
+ <State 1>: 0.00ns
+ST_1: stg_6 [1/1] 0.00ns
+:0  call void (...)* @_ssdm_op_SpecBitsMap(i1* %clk), !map !156
+
+ST_1: stg_7 [1/1] 0.00ns
+:1  call void (...)* @_ssdm_op_SpecBitsMap(i1* %reset), !map !160
+
+ST_1: stg_8 [1/1] 0.00ns
+:2  call void (...)* @_ssdm_op_SpecBitsMap(i32* %adr_i), !map !164
+
+ST_1: stg_9 [1/1] 0.00ns
+:3  call void (...)* @_ssdm_op_SpecBitsMap(i32* %dat_i), !map !168
+
+ST_1: stg_10 [1/1] 0.00ns
+:4  call void (...)* @_ssdm_op_SpecBitsMap(i1* %we_i), !map !172
+
+ST_1: stg_11 [1/1] 0.00ns
+:5  call void (...)* @_ssdm_op_SpecBitsMap(i1* %stb_i), !map !176
+
+ST_1: stg_12 [1/1] 0.00ns
+:6  call void (...)* @_ssdm_op_SpecBitsMap(i1* %cyc_i), !map !180
+
+ST_1: stg_13 [1/1] 0.00ns
+:7  call void (...)* @_ssdm_op_SpecBitsMap(i4* %sel_i), !map !184
+
+ST_1: stg_14 [1/1] 0.00ns
+:8  call void (...)* @_ssdm_op_SpecBitsMap(i32* %dat_o), !map !188
+
+ST_1: stg_15 [1/1] 0.00ns
+:9  call void (...)* @_ssdm_op_SpecBitsMap(i1* %ack_o), !map !192
+
+ST_1: stg_16 [1/1] 0.00ns
+:10  call void (...)* @_ssdm_op_SpecBitsMap(i1* %int_o), !map !196
+
+ST_1: stg_17 [1/1] 0.00ns
+:11  call void (...)* @_ssdm_op_SpecBitsMap([16 x i32]* %WBSlave_regs), !map !200
+
+ST_1: stg_18 [1/1] 0.00ns
+:12  call void (...)* @_ssdm_op_SpecBitsMap([500 x i32]* %WBSlave_PBuffer), !map !204
+
+ST_1: stg_19 [1/1] 0.00ns
+:13  call void (...)* @_ssdm_op_SpecBitsMap(i3* %WBSlave_CTRL_ADDR_V), !map !208
+
+ST_1: stg_20 [1/1] 0.00ns
+:14  call void (...)* @_ssdm_op_SpecBitsMap(i3* %WBSlave_STAT_ADDR_V), !map !212
+
+ST_1: stg_21 [1/1] 0.00ns
+:15  call void (...)* @_ssdm_op_SpecBitsMap(float* %WBSlave_log_in), !map !216
+
+ST_1: stg_22 [1/1] 0.00ns
+:16  call void (...)* @_ssdm_op_SpecBitsMap(float* %WBSlave_log_out), !map !220
+
+ST_1: stg_23 [1/1] 0.00ns
+:17  call void (...)* @_ssdm_op_SpecBitsMap(i1* %WBSlave_log_start_V), !map !224
+
+ST_1: stg_24 [1/1] 0.00ns
+:18  call void (...)* @_ssdm_op_SpecBitsMap(i1* %WBSlave_log_done_V), !map !228
+
+ST_1: stg_25 [1/1] 0.00ns
+:19  call void (...)* @_ssdm_op_SpecBitsMap(i3* %WBSlave_REG0_ADDR_V), !map !232
+
+ST_1: stg_26 [1/1] 0.00ns
+:20  call void (...)* @_ssdm_op_SpecBitsMap(i3* %WBSlave_REG1_ADDR_V), !map !236
+
+ST_1: stg_27 [1/1] 0.00ns
+:21  call void (...)* @_ssdm_op_SpecBitsMap(i3* %WBSlave_REG2_ADDR_V), !map !240
+
+ST_1: stg_28 [1/1] 0.00ns
+:22  call void (...)* @_ssdm_op_SpecBitsMap(i3* %WBSlave_REG3_ADDR_V), !map !244
+
+ST_1: stg_29 [1/1] 0.00ns
+:23  call void (...)* @_ssdm_op_SpecBitsMap(i3* %WBSlave_REG4_ADDR_V), !map !248
+
+ST_1: stg_30 [1/1] 0.00ns
+:24  call void (...)* @_ssdm_op_SpecBitsMap(i3* %WBSlave_DELAY_ADDR_V), !map !252
+
+ST_1: stg_31 [1/1] 0.00ns
+:25  call void (...)* @_ssdm_op_SpecBitsMap(i3* %WBSlave_LAST_ADDR_V), !map !256
+
+ST_1: stg_32 [1/1] 0.00ns
+:26  call void @_ssdm_op_Write.ap_auto.i3P(i3* %WBSlave_CTRL_ADDR_V, i3 0)
+
+ST_1: stg_33 [1/1] 0.00ns
+:27  call void @_ssdm_op_Write.ap_auto.i3P(i3* %WBSlave_STAT_ADDR_V, i3 1)
+
+ST_1: stg_34 [1/1] 0.00ns
+:28  call void @_ssdm_op_Write.ap_auto.i3P(i3* %WBSlave_REG0_ADDR_V, i3 2)
+
+ST_1: stg_35 [1/1] 0.00ns
+:29  call void @_ssdm_op_Write.ap_auto.i3P(i3* %WBSlave_REG1_ADDR_V, i3 3)
+
+ST_1: stg_36 [1/1] 0.00ns
+:30  call void @_ssdm_op_Write.ap_auto.i3P(i3* %WBSlave_REG2_ADDR_V, i3 -4)
+
+ST_1: stg_37 [1/1] 0.00ns
+:31  call void @_ssdm_op_Write.ap_auto.i3P(i3* %WBSlave_REG3_ADDR_V, i3 -3)
+
+ST_1: stg_38 [1/1] 0.00ns
+:32  call void @_ssdm_op_Write.ap_auto.i3P(i3* %WBSlave_REG4_ADDR_V, i3 -2)
+
+ST_1: stg_39 [1/1] 0.00ns
+:33  call void @_ssdm_op_Write.ap_auto.i3P(i3* %WBSlave_DELAY_ADDR_V, i3 -1)
+
+ST_1: stg_40 [1/1] 0.00ns
+:34  call void @_ssdm_op_Write.ap_auto.i3P(i3* %WBSlave_LAST_ADDR_V, i3 -1)
+
+ST_1: stg_41 [1/1] 0.00ns
+:35  call void (...)* @_ssdm_op_SpecTopModule([8 x i8]* @p_str8, [8 x i8]* @p_str8) nounwind
+
+ST_1: WBSlave_ssdm_thread_M_proce [1/1] 0.00ns
+:36  %WBSlave_ssdm_thread_M_proce = load i1* @WBSlave_ssdm_thread_M_processBus, align 1
+
+ST_1: stg_43 [1/1] 0.00ns
+:37  br i1 %WBSlave_ssdm_thread_M_proce, label %1, label %2
+
+ST_1: stg_44 [1/1] 0.00ns
+:0  call void (...)* @_ssdm_op_SpecProcessDecl([8 x i8]* @p_str8, i32 2, [11 x i8]* @p_str9) nounwind
+
+ST_1: stg_45 [1/1] 0.00ns
+:1  call void (...)* @_ssdm_op_SpecSensitive([11 x i8]* @p_str9, [4 x i8]* @p_str10, i1* %clk, i32 1) nounwind
+
+ST_1: stg_46 [1/1] 0.00ns
+:2  call void (...)* @_ssdm_op_SpecSensitive([11 x i8]* @p_str9, [6 x i8]* @p_str11, i1* %reset, i32 3) nounwind
+
+ST_1: WBSlave_ssdm_thread_M_proce_1 [1/1] 0.00ns
+:3  %WBSlave_ssdm_thread_M_proce_1 = load i1* @WBSlave_ssdm_thread_M_processSlave, align 1
+
+ST_1: stg_48 [1/1] 0.00ns
+:4  br i1 %WBSlave_ssdm_thread_M_proce_1, label %3, label %4
+
+ST_1: stg_49 [1/1] 0.00ns
+:0  call void (...)* @_ssdm_op_SpecProcessDecl([8 x i8]* @p_str8, i32 2, [13 x i8]* @p_str12) nounwind
+
+ST_1: stg_50 [1/1] 0.00ns
+:1  call void (...)* @_ssdm_op_SpecSensitive([13 x i8]* @p_str12, [4 x i8]* @p_str10, i1* %clk, i32 1) nounwind
+
+ST_1: stg_51 [1/1] 0.00ns
+:2  call void (...)* @_ssdm_op_SpecSensitive([13 x i8]* @p_str12, [6 x i8]* @p_str11, i1* %reset, i32 3) nounwind
+
+ST_1: WBSlave_ssdm_thread_M_getLo [1/1] 0.00ns
+:3  %WBSlave_ssdm_thread_M_getLo = load i1* @WBSlave_ssdm_thread_M_getLog, align 1
+
+ST_1: stg_53 [1/1] 0.00ns
+:4  br i1 %WBSlave_ssdm_thread_M_getLo, label %5, label %6
+
+ST_1: stg_54 [1/1] 0.00ns
+:0  call void (...)* @_ssdm_op_SpecProcessDecl([8 x i8]* @p_str8, i32 2, [7 x i8]* @p_str13) nounwind
+
+ST_1: stg_55 [1/1] 0.00ns
+:1  call void (...)* @_ssdm_op_SpecSensitive([7 x i8]* @p_str13, [4 x i8]* @p_str10, i1* %clk, i32 1) nounwind
+
+ST_1: stg_56 [1/1] 0.00ns
+:2  call void (...)* @_ssdm_op_SpecSensitive([7 x i8]* @p_str13, [6 x i8]* @p_str11, i1* %reset, i32 3) nounwind
+
+ST_1: stg_57 [1/1] 0.00ns
+:3  call void (...)* @_ssdm_op_SpecPort([8 x i8]* @p_str8, i32 0, [7 x i8]* @p_str14, [4 x i8]* @p_str10, i32 0, i32 0, i1* %clk) nounwind
+
+ST_1: stg_58 [1/1] 0.00ns
+:4  call void (...)* @_ssdm_op_SpecPort([8 x i8]* @p_str8, i32 0, [7 x i8]* @p_str14, [6 x i8]* @p_str11, i32 0, i32 0, i1* %reset) nounwind
+
+ST_1: stg_59 [1/1] 0.00ns
+:5  call void (...)* @_ssdm_op_SpecPort([8 x i8]* @p_str8, i32 0, [8 x i8]* @p_str15, [6 x i8]* @p_str16, i32 0, i32 0, i32* %adr_i) nounwind
+
+ST_1: stg_60 [1/1] 0.00ns
+:6  call void (...)* @_ssdm_op_SpecPort([8 x i8]* @p_str8, i32 0, [8 x i8]* @p_str15, [6 x i8]* @p_str17, i32 0, i32 0, i32* %dat_i) nounwind
+
+ST_1: stg_61 [1/1] 0.00ns
+:7  call void (...)* @_ssdm_op_SpecPort([8 x i8]* @p_str8, i32 0, [7 x i8]* @p_str14, [5 x i8]* @p_str18, i32 0, i32 0, i1* %we_i) nounwind
+
+ST_1: stg_62 [1/1] 0.00ns
+:8  call void (...)* @_ssdm_op_SpecPort([8 x i8]* @p_str8, i32 0, [7 x i8]* @p_str14, [6 x i8]* @p_str19, i32 0, i32 0, i1* %stb_i) nounwind
+
+ST_1: stg_63 [1/1] 0.00ns
+:9  call void (...)* @_ssdm_op_SpecPort([8 x i8]* @p_str8, i32 0, [7 x i8]* @p_str14, [6 x i8]* @p_str20, i32 0, i32 0, i1* %cyc_i) nounwind
+
+ST_1: stg_64 [1/1] 0.00ns
+:10  call void (...)* @_ssdm_op_SpecPort([8 x i8]* @p_str8, i32 0, [31 x i8]* @p_str21, [6 x i8]* @p_str22, i32 0, i32 0, i4* %sel_i) nounwind
+
+ST_1: stg_65 [1/1] 0.00ns
+:11  call void (...)* @_ssdm_op_SpecPort([8 x i8]* @p_str8, i32 1, [8 x i8]* @p_str15, [6 x i8]* @p_str23, i32 0, i32 0, i32* %dat_o) nounwind
+
+ST_1: stg_66 [1/1] 0.00ns
+:12  call void (...)* @_ssdm_op_SpecPort([8 x i8]* @p_str8, i32 1, [7 x i8]* @p_str14, [6 x i8]* @p_str24, i32 0, i32 0, i1* %ack_o) nounwind
+
+ST_1: stg_67 [1/1] 0.00ns
+:13  call void (...)* @_ssdm_op_SpecPort([8 x i8]* @p_str8, i32 1, [7 x i8]* @p_str14, [6 x i8]* @p_str25, i32 0, i32 0, i1* %int_o) nounwind
+
+ST_1: stg_68 [1/1] 0.00ns
+:14  ret void
+
+
+ <State 2>: 0.00ns
+ST_2: stg_69 [2/2] 0.00ns
+:0  call void @"WBSlave::WBSlave_WBSlave::getLog"(i1* %clk, i1* %reset, i32* %adr_i, i32* %dat_i, i1* %we_i, i1* %stb_i, i1* %cyc_i, i4* %sel_i, i32* %dat_o, i1* %ack_o, i1* %int_o, [16 x i32]* %WBSlave_regs, [500 x i32]* %WBSlave_PBuffer, i3* %WBSlave_CTRL_ADDR_V, i3* %WBSlave_STAT_ADDR_V, float* %WBSlave_log_in, float* %WBSlave_log_out, i1* %WBSlave_log_start_V, i1* %WBSlave_log_done_V, i3* %WBSlave_REG0_ADDR_V, i3* %WBSlave_REG1_ADDR_V, i3* %WBSlave_REG2_ADDR_V, i3* %WBSlave_REG3_ADDR_V, i3* %WBSlave_REG4_ADDR_V, i3* %WBSlave_DELAY_ADDR_V, i3* %WBSlave_LAST_ADDR_V)
+
+
+ <State 3>: 8.25ns
+ST_3: stg_70 [1/2] 8.25ns
+:0  call void @"WBSlave::WBSlave_WBSlave::getLog"(i1* %clk, i1* %reset, i32* %adr_i, i32* %dat_i, i1* %we_i, i1* %stb_i, i1* %cyc_i, i4* %sel_i, i32* %dat_o, i1* %ack_o, i1* %int_o, [16 x i32]* %WBSlave_regs, [500 x i32]* %WBSlave_PBuffer, i3* %WBSlave_CTRL_ADDR_V, i3* %WBSlave_STAT_ADDR_V, float* %WBSlave_log_in, float* %WBSlave_log_out, i1* %WBSlave_log_start_V, i1* %WBSlave_log_done_V, i3* %WBSlave_REG0_ADDR_V, i3* %WBSlave_REG1_ADDR_V, i3* %WBSlave_REG2_ADDR_V, i3* %WBSlave_REG3_ADDR_V, i3* %WBSlave_REG4_ADDR_V, i3* %WBSlave_DELAY_ADDR_V, i3* %WBSlave_LAST_ADDR_V)
+
+ST_3: stg_71 [1/1] 0.00ns
+:1  br label %UnifiedUnreachableBlock
+
+ST_3: stg_72 [1/2] 8.25ns
+:0  call void @"WBSlave::WBSlave_WBSlave::processSlave"(i1* %clk, i1* %reset, i32* %adr_i, i32* %dat_i, i1* %we_i, i1* %stb_i, i1* %cyc_i, i4* %sel_i, i32* %dat_o, i1* %ack_o, i1* %int_o, [16 x i32]* %WBSlave_regs, [500 x i32]* %WBSlave_PBuffer, i3* %WBSlave_CTRL_ADDR_V, i3* %WBSlave_STAT_ADDR_V, float* %WBSlave_log_in, float* %WBSlave_log_out, i1* %WBSlave_log_start_V, i1* %WBSlave_log_done_V, i3* %WBSlave_REG0_ADDR_V, i3* %WBSlave_REG1_ADDR_V, i3* %WBSlave_REG2_ADDR_V, i3* %WBSlave_REG3_ADDR_V, i3* %WBSlave_REG4_ADDR_V, i3* %WBSlave_DELAY_ADDR_V, i3* %WBSlave_LAST_ADDR_V)
+
+ST_3: stg_73 [1/1] 0.00ns
+:1  br label %UnifiedUnreachableBlock
+
+ST_3: stg_74 [1/2] 4.39ns
+:0  call void @"WBSlave::WBSlave_WBSlave::processBus"(i1* %clk, i1* %reset, i32* %adr_i, i32* %dat_i, i1* %we_i, i1* %stb_i, i1* %cyc_i, i4* %sel_i, i32* %dat_o, i1* %ack_o, i1* %int_o, [16 x i32]* %WBSlave_regs, [500 x i32]* %WBSlave_PBuffer, i3* %WBSlave_CTRL_ADDR_V, i3* %WBSlave_STAT_ADDR_V, float* %WBSlave_log_in, float* %WBSlave_log_out, i1* %WBSlave_log_start_V, i1* %WBSlave_log_done_V, i3* %WBSlave_REG0_ADDR_V, i3* %WBSlave_REG1_ADDR_V, i3* %WBSlave_REG2_ADDR_V, i3* %WBSlave_REG3_ADDR_V, i3* %WBSlave_REG4_ADDR_V, i3* %WBSlave_DELAY_ADDR_V, i3* %WBSlave_LAST_ADDR_V)
+
+ST_3: stg_75 [1/1] 0.00ns
+:1  br label %UnifiedUnreachableBlock
+
+ST_3: stg_76 [1/1] 0.00ns
+UnifiedUnreachableBlock:0  unreachable
+
+
+ <State 4>: 0.00ns
+ST_4: stg_77 [2/2] 0.00ns
+:0  call void @"WBSlave::WBSlave_WBSlave::processSlave"(i1* %clk, i1* %reset, i32* %adr_i, i32* %dat_i, i1* %we_i, i1* %stb_i, i1* %cyc_i, i4* %sel_i, i32* %dat_o, i1* %ack_o, i1* %int_o, [16 x i32]* %WBSlave_regs, [500 x i32]* %WBSlave_PBuffer, i3* %WBSlave_CTRL_ADDR_V, i3* %WBSlave_STAT_ADDR_V, float* %WBSlave_log_in, float* %WBSlave_log_out, i1* %WBSlave_log_start_V, i1* %WBSlave_log_done_V, i3* %WBSlave_REG0_ADDR_V, i3* %WBSlave_REG1_ADDR_V, i3* %WBSlave_REG2_ADDR_V, i3* %WBSlave_REG3_ADDR_V, i3* %WBSlave_REG4_ADDR_V, i3* %WBSlave_DELAY_ADDR_V, i3* %WBSlave_LAST_ADDR_V)
+
+
+ <State 5>: 2.99ns
+ST_5: stg_78 [2/2] 2.99ns
+:0  call void @"WBSlave::WBSlave_WBSlave::processBus"(i1* %clk, i1* %reset, i32* %adr_i, i32* %dat_i, i1* %we_i, i1* %stb_i, i1* %cyc_i, i4* %sel_i, i32* %dat_o, i1* %ack_o, i1* %int_o, [16 x i32]* %WBSlave_regs, [500 x i32]* %WBSlave_PBuffer, i3* %WBSlave_CTRL_ADDR_V, i3* %WBSlave_STAT_ADDR_V, float* %WBSlave_log_in, float* %WBSlave_log_out, i1* %WBSlave_log_start_V, i1* %WBSlave_log_done_V, i3* %WBSlave_REG0_ADDR_V, i3* %WBSlave_REG1_ADDR_V, i3* %WBSlave_REG2_ADDR_V, i3* %WBSlave_REG3_ADDR_V, i3* %WBSlave_REG4_ADDR_V, i3* %WBSlave_DELAY_ADDR_V, i3* %WBSlave_LAST_ADDR_V)
+
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

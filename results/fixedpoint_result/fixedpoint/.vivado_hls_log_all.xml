@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'WBSlave_getLog/WBSlave_log_start_V_o_ap_vld' to 0." projectName="fixedpoint" solutionName="solution1" date="2016-06-29T18:32:10.976+0200" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'WBSlave_getLog/WBSlave_log_start_V_o' to 0." projectName="fixedpoint" solutionName="solution1" date="2016-06-29T18:32:10.945+0200" type="Warning"/>
+        <logs message="@W [SCA-202] Signal 'WBSlave_DELAY_ADDR_V' has no reset." projectName="fixedpoint" solutionName="solution1" date="2016-06-29T18:32:06.233+0200" type="Warning"/>
+        <logs message="@W [SCA-202] Signal 'WBSlave_REG1_ADDR_V' has no reset." projectName="fixedpoint" solutionName="solution1" date="2016-06-29T18:32:06.218+0200" type="Warning"/>
+        <logs message="@W [SCA-202] Signal 'WBSlave_log_out_V' has no reset." projectName="fixedpoint" solutionName="solution1" date="2016-06-29T18:32:06.204+0200" type="Warning"/>
+        <logs message="@W [SCA-202] Signal 'WBSlave_log_in_V' has no reset." projectName="fixedpoint" solutionName="solution1" date="2016-06-29T18:32:06.190+0200" type="Warning"/>
+        <logs message="@W [SCA-202] Signal 'WBSlave_STAT_ADDR_V' has no reset." projectName="fixedpoint" solutionName="solution1" date="2016-06-29T18:32:06.175+0200" type="Warning"/>
+        <logs message="@W [SCA-202] Signal 'WBSlave_CTRL_ADDR_V' has no reset." projectName="fixedpoint" solutionName="solution1" date="2016-06-29T18:32:06.159+0200" type="Warning"/>
+        <logs message="@W [SCA-202] Non-channel variable 'WBSlave_log_done_V' of module 'WBSlave' is used for inter-process communications which may result in nondeterministic simulation behavior. Please consider changing it to an sc_signal." projectName="fixedpoint" solutionName="solution1" date="2016-06-29T18:32:06.147+0200" type="Warning"/>
+        <logs message="@W [SCA-202] Found 2 SC_CTHREAD writers to variable 'WBSlave_log_start_V', there should have handshakings among the writers.&#xA;             Process writer(1): 'WBSlave_processSlave' (SC_CTHREAD)&#xA;             Process writer(2): 'WBSlave_getLog' (SC_CTHREAD)" projectName="fixedpoint" solutionName="solution1" date="2016-06-29T18:32:06.124+0200" type="Warning"/>
+        <logs message="@W [SCA-202] Non-channel variable 'WBSlave_log_start_V' of module 'WBSlave' is used for inter-process communications which may result in nondeterministic simulation behavior. Please consider changing it to an sc_signal." projectName="fixedpoint" solutionName="solution1" date="2016-06-29T18:32:06.085+0200" type="Warning"/>
+        <logs message="@W [SCA-202] Non-channel variable 'WBSlave_log_out_V' of module 'WBSlave' is used for inter-process communications which may result in nondeterministic simulation behavior. Please consider changing it to an sc_signal." projectName="fixedpoint" solutionName="solution1" date="2016-06-29T18:32:06.074+0200" type="Warning"/>
+        <logs message="@W [SCA-202] Non-channel variable 'WBSlave_log_in_V' of module 'WBSlave' is used for inter-process communications which may result in nondeterministic simulation behavior. Please consider changing it to an sc_signal." projectName="fixedpoint" solutionName="solution1" date="2016-06-29T18:32:06.061+0200" type="Warning"/>
+        <logs message="@W [SCA-202] The reset block of process 'WBSlave::processBus' contains IO read operations (wire read on port 'WBSlave_DELAY_ADDR_V' (../PJ/synth/wb_slave.cpp:238)), which is not recommended." projectName="fixedpoint" solutionName="solution1" date="2016-06-29T18:32:06.049+0200" type="Warning"/>
+        <logs message="@W [XFORM-562] Loop 'Loop-1.1' (../PJ/synth/wb_slave.cpp:190) in function 'WBSlave::getLog' has unknown bound because it has multiple exiting blocks." projectName="fixedpoint" solutionName="solution1" date="2016-06-29T18:32:06.035+0200" type="Warning"/>
+        <logs message="@W [XFORM-561] 'Loop-1' (../PJ/synth/wb_slave.cpp:189:6) in function 'WBSlave::getLog' is an infinite loop." projectName="fixedpoint" solutionName="solution1" date="2016-06-29T18:32:05.475+0200" type="Warning"/>
+        <logs message="@W [XFORM-561] 'Loop-1' (../PJ/synth/wb_slave.cpp:271:7) in function 'WBSlave::processSlave' is an infinite loop." projectName="fixedpoint" solutionName="solution1" date="2016-06-29T18:32:02.354+0200" type="Warning"/>
+        <logs message="@W [XFORM-561] 'Loop-1' (../PJ/synth/wb_slave.cpp:243:41) in function 'WBSlave::processBus' is an infinite loop." projectName="fixedpoint" solutionName="solution1" date="2016-06-29T18:32:02.313+0200" type="Warning"/>
+        <logs message="@W [XFORM-561] Updating loop upper bound from 256 to 255 for loop 'Loop-0-2-0' in function 'WBSlave::processSlave'." projectName="fixedpoint" solutionName="solution1" date="2016-06-29T18:32:00.117+0200" type="Warning"/>
+        <logs message="@W [XFORM-503] Cannot unroll loop 'Loop-1.8' (../PJ/synth/wb_slave.cpp:376) in function 'WBSlave::processBus': cannot completely unroll a loop with a variable trip count." projectName="fixedpoint" solutionName="solution1" date="2016-06-29T18:31:59.187+0200" type="Warning"/>
+        <logs message="@W [XFORM-503] Cannot unroll loop 'Loop-1.6' (../PJ/synth/wb_slave.cpp:367) in function 'WBSlave::processBus': cannot completely unroll a loop with a variable trip count." projectName="fixedpoint" solutionName="solution1" date="2016-06-29T18:31:57.551+0200" type="Warning"/>
+        <logs message="@W [XFORM-503] Cannot unroll loop 'Loop-1.4' (../PJ/synth/wb_slave.cpp:353) in function 'WBSlave::processBus': cannot completely unroll a loop with a variable trip count." projectName="fixedpoint" solutionName="solution1" date="2016-06-29T18:31:57.535+0200" type="Warning"/>
+        <logs message="@W [XFORM-503] Cannot unroll loop 'Loop-1.2' (../PJ/synth/wb_slave.cpp:344) in function 'WBSlave::processBus': cannot completely unroll a loop with a variable trip count." projectName="fixedpoint" solutionName="solution1" date="2016-06-29T18:31:57.514+0200" type="Warning"/>
+        <logs message="@W [SYNCHK-77] Found opaque type argument 'name' of top function 'WBSlave::WBSlave'. Possible causes are: (1) the argument is passed by reference; (2) the argument is never used in the function; (3) the argument is of templated class type. " projectName="fixedpoint" solutionName="solution1" date="2016-06-29T18:31:53.414+0200" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

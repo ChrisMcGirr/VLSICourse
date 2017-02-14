@@ -1,0 +1,1516 @@
+
+
+================================================================
+== Vivado HLS Report for 'WBSlave_processSlave'
+================================================================
+* Date:           Wed Jun 29 18:15:45 2016
+
+* Version:        2014.4 (Build 1071461 on Tue Nov 18 16:42:57 PM 2014)
+* Project:        floatpoint
+* Solution:       solution1
+* Product family: spartan6
+* Target device:  xc6slx150tfgg484-3
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +---------+-------+----------+------------+
+    |  Clock  | Target| Estimated| Uncertainty|
+    +---------+-------+----------+------------+
+    |default  |  10.00|      8.53|        1.25|
+    +---------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +------+---------+------+---------+---------+
+    |     Latency    |    Interval    | Pipeline|
+    |  min |   max   |  min |   max   |   Type  |
+    +------+---------+------+---------+---------+
+    |  9472|  1185288|  9472|  1185288|   none  |
+    +------+---------+------+---------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------------+------+---------+----------------+-----------+-----------+---------+----------+
+        |                 |     Latency    |    Iteration   |  Initiation Interval  |   Trip  |          |
+        |    Loop Name    |  min |   max   |     Latency    |  achieved |   target  |  Count  | Pipelined|
+        +-----------------+------+---------+----------------+-----------+-----------+---------+----------+
+        |- Loop 1         |  9469|  1185285| 9469 ~ 1185285 |          -|          -|   inf   |    no    |
+        | + Loop 1.1      |  4352|     4352|              17|          -|          -|      256|    no    |
+        | + Loop 1.2      |  1280|     4096|     5 ~ 16     |          -|          -|      256|    no    |
+        | + Loop 1.3      |  3825|  1176825|    15 ~ 4615   |          -|          -|      255|    no    |
+        |  ++ Loop 1.3.1  |     7|     4590|     7 ~ 18     |          -|          -| 1 ~ 255 |    no    |
+        +-----------------+------+---------+----------------+-----------+-----------+---------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48A|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|Expression       |        -|      -|       -|      -|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        -|      -|       -|      -|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|      -|
+|Register         |        -|      -|       -|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |        0|      0|       0|      0|
++-----------------+---------+-------+--------+-------+
+|Available        |      268|    180|  184304|  92152|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        0|      0|       0|      0|
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
+N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 0
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 87
+* Pipeline: 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	11  / (!exitcond1)
+	27  / (exitcond1)
+11 --> 
+	12  / true
+12 --> 
+	13  / true
+13 --> 
+	14  / true
+14 --> 
+	15  / true
+15 --> 
+	16  / true
+16 --> 
+	17  / true
+17 --> 
+	18  / true
+18 --> 
+	19  / true
+19 --> 
+	20  / true
+20 --> 
+	21  / true
+21 --> 
+	22  / true
+22 --> 
+	23  / true
+23 --> 
+	24  / true
+24 --> 
+	25  / true
+25 --> 
+	26  / true
+26 --> 
+	10  / true
+27 --> 
+	28  / (!exitcond2)
+	43  / (exitcond2)
+28 --> 
+	29  / true
+29 --> 
+	30  / true
+30 --> 
+	31  / (!tmp_25)
+	42  / (tmp_25)
+31 --> 
+	32  / true
+32 --> 
+	33  / true
+33 --> 
+	34  / true
+34 --> 
+	35  / true
+35 --> 
+	36  / true
+36 --> 
+	37  / true
+37 --> 
+	38  / true
+38 --> 
+	39  / true
+39 --> 
+	40  / true
+40 --> 
+	41  / true
+41 --> 
+	42  / true
+42 --> 
+	27  / true
+43 --> 
+	44  / (!exitcond3)
+	85  / (exitcond3)
+44 --> 
+	45  / (!exitcond)
+	62  / (exitcond)
+45 --> 
+	46  / true
+46 --> 
+	47  / true
+47 --> 
+	48  / true
+48 --> 
+	49  / true
+49 --> 
+	50  / (tmp_50)
+	61  / (!tmp_50)
+50 --> 
+	51  / true
+51 --> 
+	52  / true
+52 --> 
+	53  / true
+53 --> 
+	54  / true
+54 --> 
+	55  / true
+55 --> 
+	56  / true
+56 --> 
+	57  / true
+57 --> 
+	58  / true
+58 --> 
+	59  / true
+59 --> 
+	60  / true
+60 --> 
+	61  / true
+61 --> 
+	44  / true
+62 --> 
+	63  / true
+63 --> 
+	64  / (or_cond)
+	81  / (!or_cond)
+64 --> 
+	65  / true
+65 --> 
+	66  / true
+66 --> 
+	67  / true
+67 --> 
+	68  / true
+68 --> 
+	69  / true
+69 --> 
+	70  / true
+70 --> 
+	71  / true
+71 --> 
+	72  / true
+72 --> 
+	73  / true
+73 --> 
+	74  / true
+74 --> 
+	75  / true
+75 --> 
+	76  / true
+76 --> 
+	77  / true
+77 --> 
+	78  / true
+78 --> 
+	79  / true
+79 --> 
+	80  / true
+80 --> 
+	81  / true
+81 --> 
+	82  / true
+82 --> 
+	83  / true
+83 --> 
+	84  / true
+84 --> 
+	43  / true
+85 --> 
+	86  / true
+86 --> 
+	87  / true
+87 --> 
+	4  / true
+* FSM state operations: 
+
+ <State 1>: 0.00ns
+ST_1: psiMax_3 [1/1] 0.00ns
+:0  %psiMax_3 = alloca float, align 4
+
+ST_1: thresh [1/1] 0.00ns
+:1  %thresh = alloca i32, align 4
+
+ST_1: prob [1/1] 0.00ns
+:28  %prob = alloca [256 x float], align 16
+
+
+ <State 2>: 0.00ns
+ST_2: stg_91 [1/1] 0.00ns
+:2  call void (...)* @_ssdm_op_SpecBitsMap(i1* %clk), !map !156
+
+ST_2: stg_92 [1/1] 0.00ns
+:3  call void (...)* @_ssdm_op_SpecBitsMap(i1* %reset), !map !160
+
+ST_2: stg_93 [1/1] 0.00ns
+:4  call void (...)* @_ssdm_op_SpecBitsMap(i32* %adr_i), !map !164
+
+ST_2: stg_94 [1/1] 0.00ns
+:5  call void (...)* @_ssdm_op_SpecBitsMap(i32* %dat_i), !map !168
+
+ST_2: stg_95 [1/1] 0.00ns
+:6  call void (...)* @_ssdm_op_SpecBitsMap(i1* %we_i), !map !172
+
+ST_2: stg_96 [1/1] 0.00ns
+:7  call void (...)* @_ssdm_op_SpecBitsMap(i1* %stb_i), !map !176
+
+ST_2: stg_97 [1/1] 0.00ns
+:8  call void (...)* @_ssdm_op_SpecBitsMap(i1* %cyc_i), !map !180
+
+ST_2: stg_98 [1/1] 0.00ns
+:9  call void (...)* @_ssdm_op_SpecBitsMap(i4* %sel_i), !map !184
+
+ST_2: stg_99 [1/1] 0.00ns
+:10  call void (...)* @_ssdm_op_SpecBitsMap(i32* %dat_o), !map !188
+
+ST_2: stg_100 [1/1] 0.00ns
+:11  call void (...)* @_ssdm_op_SpecBitsMap(i1* %ack_o), !map !192
+
+ST_2: stg_101 [1/1] 0.00ns
+:12  call void (...)* @_ssdm_op_SpecBitsMap(i1* %int_o), !map !196
+
+ST_2: stg_102 [1/1] 0.00ns
+:13  call void (...)* @_ssdm_op_SpecBitsMap([16 x i32]* %WBSlave_regs), !map !200
+
+ST_2: stg_103 [1/1] 0.00ns
+:14  call void (...)* @_ssdm_op_SpecBitsMap([500 x i32]* %WBSlave_PBuffer), !map !204
+
+ST_2: stg_104 [1/1] 0.00ns
+:15  call void (...)* @_ssdm_op_SpecBitsMap(i3* %WBSlave_CTRL_ADDR_V), !map !208
+
+ST_2: stg_105 [1/1] 0.00ns
+:16  call void (...)* @_ssdm_op_SpecBitsMap(i3* %WBSlave_STAT_ADDR_V), !map !212
+
+ST_2: stg_106 [1/1] 0.00ns
+:17  call void (...)* @_ssdm_op_SpecBitsMap(float* %WBSlave_log_in), !map !216
+
+ST_2: stg_107 [1/1] 0.00ns
+:18  call void (...)* @_ssdm_op_SpecBitsMap(float* %WBSlave_log_out), !map !220
+
+ST_2: stg_108 [1/1] 0.00ns
+:19  call void (...)* @_ssdm_op_SpecBitsMap(i1* %WBSlave_log_start_V), !map !224
+
+ST_2: stg_109 [1/1] 0.00ns
+:20  call void (...)* @_ssdm_op_SpecBitsMap(i1* %WBSlave_log_done_V), !map !228
+
+ST_2: stg_110 [1/1] 0.00ns
+:21  call void (...)* @_ssdm_op_SpecBitsMap(i3* %WBSlave_REG0_ADDR_V), !map !232
+
+ST_2: stg_111 [1/1] 0.00ns
+:22  call void (...)* @_ssdm_op_SpecBitsMap(i3* %WBSlave_REG1_ADDR_V), !map !236
+
+ST_2: stg_112 [1/1] 0.00ns
+:23  call void (...)* @_ssdm_op_SpecBitsMap(i3* %WBSlave_REG2_ADDR_V), !map !240
+
+ST_2: stg_113 [1/1] 0.00ns
+:24  call void (...)* @_ssdm_op_SpecBitsMap(i3* %WBSlave_REG3_ADDR_V), !map !244
+
+ST_2: stg_114 [1/1] 0.00ns
+:25  call void (...)* @_ssdm_op_SpecBitsMap(i3* %WBSlave_REG4_ADDR_V), !map !248
+
+ST_2: stg_115 [1/1] 0.00ns
+:26  call void (...)* @_ssdm_op_SpecBitsMap(i3* %WBSlave_DELAY_ADDR_V), !map !252
+
+ST_2: stg_116 [1/1] 0.00ns
+:27  call void (...)* @_ssdm_op_SpecBitsMap(i3* %WBSlave_LAST_ADDR_V), !map !256
+
+ST_2: stg_117 [1/1] 0.00ns
+:29  call void (...)* @_ssdm_op_SpecPort([8 x i8]* @p_str8, i32 0, [7 x i8]* @p_str14, [4 x i8]* @p_str10, i32 0, i32 0, i1* %clk) nounwind
+
+ST_2: stg_118 [1/1] 0.00ns
+:30  call void (...)* @_ssdm_op_SpecPort([8 x i8]* @p_str8, i32 0, [7 x i8]* @p_str14, [6 x i8]* @p_str11, i32 0, i32 0, i1* %reset) nounwind
+
+ST_2: stg_119 [1/1] 0.00ns
+:31  call void (...)* @_ssdm_op_SpecPort([8 x i8]* @p_str8, i32 0, [8 x i8]* @p_str15, [6 x i8]* @p_str16, i32 0, i32 0, i32* %adr_i) nounwind
+
+ST_2: stg_120 [1/1] 0.00ns
+:32  call void (...)* @_ssdm_op_SpecPort([8 x i8]* @p_str8, i32 0, [8 x i8]* @p_str15, [6 x i8]* @p_str17, i32 0, i32 0, i32* %dat_i) nounwind
+
+ST_2: stg_121 [1/1] 0.00ns
+:33  call void (...)* @_ssdm_op_SpecPort([8 x i8]* @p_str8, i32 0, [7 x i8]* @p_str14, [5 x i8]* @p_str18, i32 0, i32 0, i1* %we_i) nounwind
+
+ST_2: stg_122 [1/1] 0.00ns
+:34  call void (...)* @_ssdm_op_SpecPort([8 x i8]* @p_str8, i32 0, [7 x i8]* @p_str14, [6 x i8]* @p_str19, i32 0, i32 0, i1* %stb_i) nounwind
+
+ST_2: stg_123 [1/1] 0.00ns
+:35  call void (...)* @_ssdm_op_SpecPort([8 x i8]* @p_str8, i32 0, [7 x i8]* @p_str14, [6 x i8]* @p_str20, i32 0, i32 0, i1* %cyc_i) nounwind
+
+ST_2: stg_124 [1/1] 0.00ns
+:36  call void (...)* @_ssdm_op_SpecPort([8 x i8]* @p_str8, i32 0, [31 x i8]* @p_str21, [6 x i8]* @p_str22, i32 0, i32 0, i4* %sel_i) nounwind
+
+ST_2: stg_125 [1/1] 0.00ns
+:37  call void (...)* @_ssdm_op_SpecPort([8 x i8]* @p_str8, i32 1, [8 x i8]* @p_str15, [6 x i8]* @p_str23, i32 0, i32 0, i32* %dat_o) nounwind
+
+ST_2: stg_126 [1/1] 0.00ns
+:38  call void (...)* @_ssdm_op_SpecPort([8 x i8]* @p_str8, i32 1, [7 x i8]* @p_str14, [6 x i8]* @p_str24, i32 0, i32 0, i1* %ack_o) nounwind
+
+ST_2: stg_127 [1/1] 0.00ns
+:39  call void (...)* @_ssdm_op_SpecPort([8 x i8]* @p_str8, i32 1, [7 x i8]* @p_str14, [6 x i8]* @p_str25, i32 0, i32 0, i1* %int_o) nounwind
+
+ST_2: stg_128 [1/1] 0.00ns
+:40  call void (...)* @_ssdm_op_SpecProcessDef([8 x i8]* @p_str8, i32 2, [13 x i8]* @p_str12) nounwind
+
+ST_2: tmp_31 [1/1] 0.00ns
+:41  %tmp_31 = call i32 (...)* @_ssdm_op_SpecRegionBegin([15 x i8]* @p_str42)
+
+ST_2: stg_130 [1/1] 0.00ns
+:42  call void (...)* @_ssdm_op_SpecProtocol(i32 1, [1 x i8]* @p_str43) nounwind
+
+ST_2: p_ssdm_reset_v [1/1] 0.00ns
+:43  %p_ssdm_reset_v = call i32 (...)* @_ssdm_op_SpecStateBegin(i32 0, i32 0, i32 1) nounwind
+
+ST_2: empty [1/1] 0.00ns
+:44  %empty = call i32 (...)* @_ssdm_op_SpecStateEnd(i32 %p_ssdm_reset_v) nounwind
+
+ST_2: empty_16 [1/1] 0.00ns
+:45  %empty_16 = call i32 (...)* @_ssdm_op_SpecRegionEnd([15 x i8]* @p_str42, i32 %tmp_31)
+
+
+ <State 3>: 1.54ns
+ST_3: WBSlave_PBuffer_addr [1/1] 0.00ns
+:46  %WBSlave_PBuffer_addr = getelementptr [500 x i32]* %WBSlave_PBuffer, i64 0, i64 64
+
+ST_3: WBSlave_log_done_V_read [1/1] 0.00ns
+:47  %WBSlave_log_done_V_read = call i1 @_ssdm_op_Read.ap_auto.i1P(i1* %WBSlave_log_done_V)
+
+ST_3: temp_1 [1/1] 0.00ns
+:48  %temp_1 = call float @_ssdm_op_Read.ap_auto.floatP(float* %WBSlave_log_out)
+
+ST_3: stg_137 [1/1] 1.54ns
+:49  store i32 0, i32* %thresh, align 4
+
+ST_3: stg_138 [1/1] 0.00ns
+:50  br label %_ZN7_ap_sc_7sc_core4waitEi.exit2
+
+
+ <State 4>: 2.39ns
+ST_4: stg_139 [1/1] 0.00ns
+_ZN7_ap_sc_7sc_core4waitEi.exit2:1  call void (...)* @_ssdm_op_Wait(i32 1) nounwind
+
+ST_4: WBSlave_REG1_ADDR_V_read [1/1] 0.00ns
+_ZN7_ap_sc_7sc_core4waitEi.exit2:8  %WBSlave_REG1_ADDR_V_read = call i3 @_ssdm_op_Read.ap_auto.i3P(i3* %WBSlave_REG1_ADDR_V)
+
+ST_4: tmp_32 [1/1] 0.00ns
+_ZN7_ap_sc_7sc_core4waitEi.exit2:9  %tmp_32 = zext i3 %WBSlave_REG1_ADDR_V_read to i64
+
+ST_4: WBSlave_regs_addr_4 [1/1] 0.00ns
+_ZN7_ap_sc_7sc_core4waitEi.exit2:10  %WBSlave_regs_addr_4 = getelementptr [16 x i32]* %WBSlave_regs, i64 0, i64 %tmp_32
+
+ST_4: WBSlave_regs_load_10 [2/2] 2.39ns
+_ZN7_ap_sc_7sc_core4waitEi.exit2:11  %WBSlave_regs_load_10 = load i32* %WBSlave_regs_addr_4, align 4
+
+
+ <State 5>: 2.39ns
+ST_5: WBSlave_regs_load_10 [1/2] 2.39ns
+_ZN7_ap_sc_7sc_core4waitEi.exit2:11  %WBSlave_regs_load_10 = load i32* %WBSlave_regs_addr_4, align 4
+
+
+ <State 6>: 8.08ns
+ST_6: n [4/4] 8.08ns
+_ZN7_ap_sc_7sc_core4waitEi.exit2:12  %n = uitofp i32 %WBSlave_regs_load_10 to float
+
+
+ <State 7>: 8.08ns
+ST_7: n [3/4] 8.08ns
+_ZN7_ap_sc_7sc_core4waitEi.exit2:12  %n = uitofp i32 %WBSlave_regs_load_10 to float
+
+
+ <State 8>: 8.08ns
+ST_8: WBSlave_CTRL_ADDR_V_read [1/1] 0.00ns
+_ZN7_ap_sc_7sc_core4waitEi.exit2:2  %WBSlave_CTRL_ADDR_V_read = call i3 @_ssdm_op_Read.ap_auto.i3P(i3* %WBSlave_CTRL_ADDR_V)
+
+ST_8: tmp [1/1] 0.00ns
+_ZN7_ap_sc_7sc_core4waitEi.exit2:3  %tmp = zext i3 %WBSlave_CTRL_ADDR_V_read to i64
+
+ST_8: WBSlave_regs_addr [1/1] 0.00ns
+_ZN7_ap_sc_7sc_core4waitEi.exit2:4  %WBSlave_regs_addr = getelementptr [16 x i32]* %WBSlave_regs, i64 0, i64 %tmp
+
+ST_8: WBSlave_regs_load [2/2] 2.39ns
+_ZN7_ap_sc_7sc_core4waitEi.exit2:5  %WBSlave_regs_load = load i32* %WBSlave_regs_addr, align 4
+
+ST_8: n [2/4] 8.08ns
+_ZN7_ap_sc_7sc_core4waitEi.exit2:12  %n = uitofp i32 %WBSlave_regs_load_10 to float
+
+
+ <State 9>: 8.08ns
+ST_9: loop_begin [1/1] 0.00ns
+_ZN7_ap_sc_7sc_core4waitEi.exit2:0  %loop_begin = call i32 (...)* @_ssdm_op_SpecLoopBegin() nounwind
+
+ST_9: WBSlave_regs_load [1/2] 2.39ns
+_ZN7_ap_sc_7sc_core4waitEi.exit2:5  %WBSlave_regs_load = load i32* %WBSlave_regs_addr, align 4
+
+ST_9: tmp_s [1/1] 2.00ns
+_ZN7_ap_sc_7sc_core4waitEi.exit2:6  %tmp_s = icmp ne i32 %WBSlave_regs_load, 0
+
+ST_9: stg_155 [1/1] 0.00ns
+_ZN7_ap_sc_7sc_core4waitEi.exit2:7  call void (...)* @_ssdm_op_Poll(i1 %tmp_s)
+
+ST_9: n [1/4] 8.08ns
+_ZN7_ap_sc_7sc_core4waitEi.exit2:12  %n = uitofp i32 %WBSlave_regs_load_10 to float
+
+ST_9: stg_157 [1/1] 0.00ns
+_ZN7_ap_sc_7sc_core4waitEi.exit2:13  call void (...)* @_ssdm_op_Wait(i32 1) nounwind
+
+ST_9: stg_158 [1/1] 1.54ns
+_ZN7_ap_sc_7sc_core4waitEi.exit2:14  br label %1
+
+
+ <State 10>: 4.12ns
+ST_10: i [1/1] 0.00ns
+:0  %i = phi i9 [ 0, %_ZN7_ap_sc_7sc_core4waitEi.exit2 ], [ %i_8, %_ZN7_ap_sc_7sc_core4waitEi.exit4 ]
+
+ST_10: exitcond1 [1/1] 1.91ns
+:1  %exitcond1 = icmp eq i9 %i, -256
+
+ST_10: empty_17 [1/1] 0.00ns
+:2  %empty_17 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 256, i64 256, i64 256)
+
+ST_10: i_8 [1/1] 1.73ns
+:3  %i_8 = add i9 %i, 1
+
+ST_10: stg_163 [1/1] 1.54ns
+:4  br i1 %exitcond1, label %.preheader116, label %_ZN7_ap_sc_7sc_core4waitEi.exit4
+
+ST_10: tmp_33 [1/1] 1.73ns
+_ZN7_ap_sc_7sc_core4waitEi.exit4:0  %tmp_33 = add i9 %i, 64
+
+ST_10: tmp_35 [1/1] 0.00ns
+_ZN7_ap_sc_7sc_core4waitEi.exit4:1  %tmp_35 = zext i9 %tmp_33 to i64
+
+ST_10: WBSlave_PBuffer_addr_2 [1/1] 0.00ns
+_ZN7_ap_sc_7sc_core4waitEi.exit4:2  %WBSlave_PBuffer_addr_2 = getelementptr [500 x i32]* %WBSlave_PBuffer, i64 0, i64 %tmp_35
+
+ST_10: WBSlave_PBuffer_load [2/2] 2.39ns
+_ZN7_ap_sc_7sc_core4waitEi.exit4:3  %WBSlave_PBuffer_load = load i32* %WBSlave_PBuffer_addr_2, align 4
+
+
+ <State 11>: 2.39ns
+ST_11: WBSlave_PBuffer_load [1/2] 2.39ns
+_ZN7_ap_sc_7sc_core4waitEi.exit4:3  %WBSlave_PBuffer_load = load i32* %WBSlave_PBuffer_addr_2, align 4
+
+
+ <State 12>: 8.08ns
+ST_12: temp [4/4] 8.08ns
+_ZN7_ap_sc_7sc_core4waitEi.exit4:4  %temp = uitofp i32 %WBSlave_PBuffer_load to float
+
+
+ <State 13>: 8.08ns
+ST_13: temp [3/4] 8.08ns
+_ZN7_ap_sc_7sc_core4waitEi.exit4:4  %temp = uitofp i32 %WBSlave_PBuffer_load to float
+
+
+ <State 14>: 8.08ns
+ST_14: temp [2/4] 8.08ns
+_ZN7_ap_sc_7sc_core4waitEi.exit4:4  %temp = uitofp i32 %WBSlave_PBuffer_load to float
+
+
+ <State 15>: 8.08ns
+ST_15: temp [1/4] 8.08ns
+_ZN7_ap_sc_7sc_core4waitEi.exit4:4  %temp = uitofp i32 %WBSlave_PBuffer_load to float
+
+
+ <State 16>: 8.53ns
+ST_16: tmp_37 [10/10] 8.53ns
+_ZN7_ap_sc_7sc_core4waitEi.exit4:5  %tmp_37 = fdiv float %temp, %n
+
+
+ <State 17>: 8.53ns
+ST_17: tmp_37 [9/10] 8.53ns
+_ZN7_ap_sc_7sc_core4waitEi.exit4:5  %tmp_37 = fdiv float %temp, %n
+
+
+ <State 18>: 8.53ns
+ST_18: tmp_37 [8/10] 8.53ns
+_ZN7_ap_sc_7sc_core4waitEi.exit4:5  %tmp_37 = fdiv float %temp, %n
+
+
+ <State 19>: 8.53ns
+ST_19: tmp_37 [7/10] 8.53ns
+_ZN7_ap_sc_7sc_core4waitEi.exit4:5  %tmp_37 = fdiv float %temp, %n
+
+
+ <State 20>: 8.53ns
+ST_20: tmp_37 [6/10] 8.53ns
+_ZN7_ap_sc_7sc_core4waitEi.exit4:5  %tmp_37 = fdiv float %temp, %n
+
+
+ <State 21>: 8.53ns
+ST_21: tmp_37 [5/10] 8.53ns
+_ZN7_ap_sc_7sc_core4waitEi.exit4:5  %tmp_37 = fdiv float %temp, %n
+
+
+ <State 22>: 8.53ns
+ST_22: tmp_37 [4/10] 8.53ns
+_ZN7_ap_sc_7sc_core4waitEi.exit4:5  %tmp_37 = fdiv float %temp, %n
+
+
+ <State 23>: 8.53ns
+ST_23: tmp_37 [3/10] 8.53ns
+_ZN7_ap_sc_7sc_core4waitEi.exit4:5  %tmp_37 = fdiv float %temp, %n
+
+
+ <State 24>: 8.53ns
+ST_24: tmp_37 [2/10] 8.53ns
+_ZN7_ap_sc_7sc_core4waitEi.exit4:5  %tmp_37 = fdiv float %temp, %n
+
+
+ <State 25>: 8.53ns
+ST_25: tmp_37 [1/10] 8.53ns
+_ZN7_ap_sc_7sc_core4waitEi.exit4:5  %tmp_37 = fdiv float %temp, %n
+
+
+ <State 26>: 2.39ns
+ST_26: tmp_38 [1/1] 0.00ns
+_ZN7_ap_sc_7sc_core4waitEi.exit4:6  %tmp_38 = zext i9 %i to i64
+
+ST_26: prob_addr [1/1] 0.00ns
+_ZN7_ap_sc_7sc_core4waitEi.exit4:7  %prob_addr = getelementptr inbounds [256 x float]* %prob, i64 0, i64 %tmp_38
+
+ST_26: stg_185 [1/1] 2.39ns
+_ZN7_ap_sc_7sc_core4waitEi.exit4:8  store float %tmp_37, float* %prob_addr, align 4
+
+ST_26: stg_186 [1/1] 0.00ns
+_ZN7_ap_sc_7sc_core4waitEi.exit4:9  call void (...)* @_ssdm_op_Wait(i32 1) nounwind
+
+ST_26: stg_187 [1/1] 0.00ns
+_ZN7_ap_sc_7sc_core4waitEi.exit4:10  br label %1
+
+
+ <State 27>: 3.44ns
+ST_27: i_1 [1/1] 0.00ns
+.preheader116:0  %i_1 = phi i9 [ %i_9, %_ZN7_ap_sc_7sc_core4waitEi.exit8 ], [ 0, %1 ]
+
+ST_27: Hn [1/1] 0.00ns
+.preheader116:1  %Hn = phi float [ %Hn_1, %_ZN7_ap_sc_7sc_core4waitEi.exit8 ], [ 0.000000e+00, %1 ]
+
+ST_27: exitcond2 [1/1] 1.91ns
+.preheader116:2  %exitcond2 = icmp eq i9 %i_1, -256
+
+ST_27: empty_18 [1/1] 0.00ns
+.preheader116:3  %empty_18 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 256, i64 256, i64 256)
+
+ST_27: i_9 [1/1] 1.73ns
+.preheader116:4  %i_9 = add i9 %i_1, 1
+
+ST_27: stg_193 [1/1] 1.54ns
+.preheader116:5  br i1 %exitcond2, label %.preheader115, label %2
+
+ST_27: tmp_39 [1/1] 0.00ns
+:0  %tmp_39 = zext i9 %i_1 to i64
+
+ST_27: prob_addr_1 [1/1] 0.00ns
+:1  %prob_addr_1 = getelementptr inbounds [256 x float]* %prob, i64 0, i64 %tmp_39
+
+ST_27: prob_load [2/2] 2.39ns
+:2  %prob_load = load float* %prob_addr_1, align 4
+
+
+ <State 28>: 6.21ns
+ST_28: prob_load [1/2] 2.39ns
+:2  %prob_load = load float* %prob_addr_1, align 4
+
+ST_28: tmp_24 [3/3] 3.82ns
+:9  %tmp_24 = fcmp oeq float %prob_load, 0.000000e+00
+
+
+ <State 29>: 3.82ns
+ST_29: tmp_24 [2/3] 3.82ns
+:9  %tmp_24 = fcmp oeq float %prob_load, 0.000000e+00
+
+
+ <State 30>: 6.28ns
+ST_30: prob_load_to_int [1/1] 0.00ns
+:3  %prob_load_to_int = bitcast float %prob_load to i32
+
+ST_30: tmp_21 [1/1] 0.00ns
+:4  %tmp_21 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %prob_load_to_int, i32 23, i32 30)
+
+ST_30: tmp_44 [1/1] 0.00ns
+:5  %tmp_44 = trunc i32 %prob_load_to_int to i23
+
+ST_30: notlhs [1/1] 1.87ns
+:6  %notlhs = icmp ne i8 %tmp_21, -1
+
+ST_30: notrhs [1/1] 2.08ns
+:7  %notrhs = icmp eq i23 %tmp_44, 0
+
+ST_30: tmp_23 [1/1] 0.92ns
+:8  %tmp_23 = or i1 %notrhs, %notlhs
+
+ST_30: tmp_24 [1/3] 3.82ns
+:9  %tmp_24 = fcmp oeq float %prob_load, 0.000000e+00
+
+ST_30: tmp_25 [1/1] 0.92ns
+:10  %tmp_25 = and i1 %tmp_23, %tmp_24
+
+ST_30: stg_208 [1/1] 1.54ns
+:11  br i1 %tmp_25, label %_ZN7_ap_sc_7sc_core4waitEi.exit8, label %_ZN7_ap_sc_7sc_core4waitEi.exit6
+
+ST_30: stg_209 [1/1] 0.00ns
+_ZN7_ap_sc_7sc_core4waitEi.exit6:0  call void @_ssdm_op_Write.ap_auto.floatP(float* %WBSlave_log_in, float %prob_load)
+
+ST_30: tmp_43 [7/7] 6.04ns
+_ZN7_ap_sc_7sc_core4waitEi.exit6:5  %tmp_43 = fmul float %prob_load, %temp_1
+
+
+ <State 31>: 6.04ns
+ST_31: tmp_43 [6/7] 6.04ns
+_ZN7_ap_sc_7sc_core4waitEi.exit6:5  %tmp_43 = fmul float %prob_load, %temp_1
+
+
+ <State 32>: 6.04ns
+ST_32: tmp_43 [5/7] 6.04ns
+_ZN7_ap_sc_7sc_core4waitEi.exit6:5  %tmp_43 = fmul float %prob_load, %temp_1
+
+
+ <State 33>: 6.04ns
+ST_33: tmp_43 [4/7] 6.04ns
+_ZN7_ap_sc_7sc_core4waitEi.exit6:5  %tmp_43 = fmul float %prob_load, %temp_1
+
+
+ <State 34>: 6.04ns
+ST_34: tmp_43 [3/7] 6.04ns
+_ZN7_ap_sc_7sc_core4waitEi.exit6:5  %tmp_43 = fmul float %prob_load, %temp_1
+
+
+ <State 35>: 6.04ns
+ST_35: tmp_43 [2/7] 6.04ns
+_ZN7_ap_sc_7sc_core4waitEi.exit6:5  %tmp_43 = fmul float %prob_load, %temp_1
+
+
+ <State 36>: 6.04ns
+ST_36: tmp_43 [1/7] 6.04ns
+_ZN7_ap_sc_7sc_core4waitEi.exit6:5  %tmp_43 = fmul float %prob_load, %temp_1
+
+
+ <State 37>: 8.25ns
+ST_37: Hn_2 [4/4] 8.25ns
+_ZN7_ap_sc_7sc_core4waitEi.exit6:6  %Hn_2 = fsub float %Hn, %tmp_43
+
+
+ <State 38>: 8.25ns
+ST_38: Hn_2 [3/4] 8.25ns
+_ZN7_ap_sc_7sc_core4waitEi.exit6:6  %Hn_2 = fsub float %Hn, %tmp_43
+
+
+ <State 39>: 8.25ns
+ST_39: Hn_2 [2/4] 8.25ns
+_ZN7_ap_sc_7sc_core4waitEi.exit6:6  %Hn_2 = fsub float %Hn, %tmp_43
+
+
+ <State 40>: 8.25ns
+ST_40: stg_220 [1/1] 0.00ns
+_ZN7_ap_sc_7sc_core4waitEi.exit6:1  call void (...)* @_ssdm_op_Wait(i32 1) nounwind
+
+ST_40: stg_221 [1/1] 0.00ns
+_ZN7_ap_sc_7sc_core4waitEi.exit6:2  call void (...)* @_ssdm_op_Poll(i1 %WBSlave_log_done_V_read)
+
+ST_40: stg_222 [1/1] 0.00ns
+_ZN7_ap_sc_7sc_core4waitEi.exit6:3  call void @_ssdm_op_Write.ap_auto.i1P(i1* %WBSlave_log_start_V, i1 false)
+
+ST_40: Hn_2 [1/4] 8.25ns
+_ZN7_ap_sc_7sc_core4waitEi.exit6:6  %Hn_2 = fsub float %Hn, %tmp_43
+
+
+ <State 41>: 1.54ns
+ST_41: stg_224 [1/1] 0.00ns
+_ZN7_ap_sc_7sc_core4waitEi.exit6:4  call void (...)* @_ssdm_op_Wait(i32 1) nounwind
+
+ST_41: stg_225 [1/1] 1.54ns
+_ZN7_ap_sc_7sc_core4waitEi.exit6:7  br label %_ZN7_ap_sc_7sc_core4waitEi.exit8
+
+
+ <State 42>: 0.00ns
+ST_42: Hn_1 [1/1] 0.00ns
+_ZN7_ap_sc_7sc_core4waitEi.exit8:0  %Hn_1 = phi float [ %Hn_2, %_ZN7_ap_sc_7sc_core4waitEi.exit6 ], [ %Hn, %2 ]
+
+ST_42: stg_227 [1/1] 0.00ns
+_ZN7_ap_sc_7sc_core4waitEi.exit8:1  call void (...)* @_ssdm_op_Wait(i32 1) nounwind
+
+ST_42: stg_228 [1/1] 0.00ns
+_ZN7_ap_sc_7sc_core4waitEi.exit8:2  br label %.preheader116
+
+
+ <State 43>: 3.44ns
+ST_43: thresh_1 [1/1] 0.00ns
+.preheader115:0  %thresh_1 = phi i9 [ %i_10, %_ZN7_ap_sc_7sc_core4waitEi.exit10 ], [ 1, %.preheader116 ]
+
+ST_43: psiMax [1/1] 0.00ns
+.preheader115:1  %psiMax = phi float [ %psiMax_1, %_ZN7_ap_sc_7sc_core4waitEi.exit10 ], [ 0.000000e+00, %.preheader116 ]
+
+ST_43: thresh_3_cast2 [1/1] 0.00ns
+.preheader115:2  %thresh_3_cast2 = zext i9 %thresh_1 to i32
+
+ST_43: thresh_3_cast [1/1] 0.00ns
+.preheader115:3  %thresh_3_cast = zext i9 %thresh_1 to i10
+
+ST_43: exitcond3 [1/1] 1.91ns
+.preheader115:4  %exitcond3 = icmp eq i9 %thresh_1, -256
+
+ST_43: empty_19 [1/1] 0.00ns
+.preheader115:5  %empty_19 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 255, i64 255, i64 255)
+
+ST_43: stg_235 [1/1] 1.54ns
+.preheader115:6  br i1 %exitcond3, label %_ZN7_ap_sc_7sc_core4waitEi.exit, label %.preheader
+
+ST_43: thresh_load [1/1] 0.00ns
+_ZN7_ap_sc_7sc_core4waitEi.exit:0  %thresh_load = load i32* %thresh, align 4
+
+ST_43: stg_237 [1/1] 2.39ns
+_ZN7_ap_sc_7sc_core4waitEi.exit:1  store i32 %thresh_load, i32* %WBSlave_PBuffer_addr, align 4
+
+ST_43: WBSlave_STAT_ADDR_V_read [1/1] 0.00ns
+_ZN7_ap_sc_7sc_core4waitEi.exit:2  %WBSlave_STAT_ADDR_V_read = call i3 @_ssdm_op_Read.ap_auto.i3P(i3* %WBSlave_STAT_ADDR_V)
+
+ST_43: tmp_40 [1/1] 0.00ns
+_ZN7_ap_sc_7sc_core4waitEi.exit:3  %tmp_40 = zext i3 %WBSlave_STAT_ADDR_V_read to i64
+
+ST_43: WBSlave_regs_addr_5 [1/1] 0.00ns
+_ZN7_ap_sc_7sc_core4waitEi.exit:4  %WBSlave_regs_addr_5 = getelementptr [16 x i32]* %WBSlave_regs, i64 0, i64 %tmp_40
+
+ST_43: WBSlave_regs_load_11 [2/2] 2.39ns
+_ZN7_ap_sc_7sc_core4waitEi.exit:5  %WBSlave_regs_load_11 = load i32* %WBSlave_regs_addr_5, align 4
+
+
+ <State 44>: 3.82ns
+ST_44: j [1/1] 0.00ns
+.preheader:0  %j = phi i8 [ %j_1, %_ZN7_ap_sc_7sc_core4waitEi.exit14 ], [ 0, %.preheader115 ]
+
+ST_44: Ps [1/1] 0.00ns
+.preheader:1  %Ps = phi float [ %Ps_1, %_ZN7_ap_sc_7sc_core4waitEi.exit14 ], [ 0.000000e+00, %.preheader115 ]
+
+ST_44: Hs [1/1] 0.00ns
+.preheader:2  %Hs = phi float [ %Hs_1, %_ZN7_ap_sc_7sc_core4waitEi.exit14 ], [ 0.000000e+00, %.preheader115 ]
+
+ST_44: j_cast [1/1] 0.00ns
+.preheader:3  %j_cast = zext i8 %j to i10
+
+ST_44: exitcond [1/1] 1.91ns
+.preheader:4  %exitcond = icmp eq i10 %j_cast, %thresh_3_cast
+
+ST_44: empty_20 [1/1] 0.00ns
+.preheader:5  %empty_20 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 1, i64 255, i64 0)
+
+ST_44: j_1 [1/1] 1.65ns
+.preheader:6  %j_1 = add i8 %j, 1
+
+ST_44: stg_249 [1/1] 0.00ns
+.preheader:7  br i1 %exitcond, label %4, label %3
+
+ST_44: tmp_46 [1/1] 0.00ns
+:0  %tmp_46 = zext i8 %j to i64
+
+ST_44: prob_addr_2 [1/1] 0.00ns
+:1  %prob_addr_2 = getelementptr inbounds [256 x float]* %prob, i64 0, i64 %tmp_46
+
+ST_44: prob_load_1 [2/2] 2.39ns
+:2  %prob_load_1 = load float* %prob_addr_2, align 4
+
+ST_44: tmp_29 [3/3] 3.82ns
+:6  %tmp_29 = fcmp ogt float %Ps, 0.000000e+00
+
+ST_44: tmp_34 [3/3] 3.82ns
+:8  %tmp_34 = fcmp olt float %Ps, 1.000000e+00
+
+
+ <State 45>: 2.39ns
+ST_45: prob_load_1 [1/2] 2.39ns
+:2  %prob_load_1 = load float* %prob_addr_2, align 4
+
+
+ <State 46>: 8.25ns
+ST_46: Ps_1 [4/4] 8.25ns
+:3  %Ps_1 = fadd float %Ps, %prob_load_1
+
+
+ <State 47>: 8.25ns
+ST_47: Ps_1 [3/4] 8.25ns
+:3  %Ps_1 = fadd float %Ps, %prob_load_1
+
+ST_47: tmp_49 [3/3] 3.82ns
+:10  %tmp_49 = fcmp ogt float %prob_load_1, 0.000000e+00
+
+
+ <State 48>: 8.25ns
+ST_48: Ps_1 [2/4] 8.25ns
+:3  %Ps_1 = fadd float %Ps, %prob_load_1
+
+ST_48: tmp_49 [2/3] 3.82ns
+:10  %tmp_49 = fcmp ogt float %prob_load_1, 0.000000e+00
+
+
+ <State 49>: 8.25ns
+ST_49: Ps_1 [1/4] 8.25ns
+:3  %Ps_1 = fadd float %Ps, %prob_load_1
+
+ST_49: prob_load_1_to_int [1/1] 0.00ns
+:4  %prob_load_1_to_int = bitcast float %prob_load_1 to i32
+
+ST_49: tmp_36 [1/1] 0.00ns
+:5  %tmp_36 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %prob_load_1_to_int, i32 23, i32 30)
+
+ST_49: tmp_47 [1/1] 0.00ns
+:6  %tmp_47 = trunc i32 %prob_load_1_to_int to i23
+
+ST_49: notlhs9 [1/1] 1.87ns
+:7  %notlhs9 = icmp ne i8 %tmp_36, -1
+
+ST_49: notrhs3 [1/1] 2.08ns
+:8  %notrhs3 = icmp eq i23 %tmp_47, 0
+
+ST_49: tmp_48 [1/1] 0.92ns
+:9  %tmp_48 = or i1 %notrhs3, %notlhs9
+
+ST_49: tmp_49 [1/3] 3.82ns
+:10  %tmp_49 = fcmp ogt float %prob_load_1, 0.000000e+00
+
+ST_49: tmp_50 [1/1] 0.92ns
+:11  %tmp_50 = and i1 %tmp_48, %tmp_49
+
+ST_49: stg_270 [1/1] 1.54ns
+:12  br i1 %tmp_50, label %_ZN7_ap_sc_7sc_core4waitEi.exit12, label %_ZN7_ap_sc_7sc_core4waitEi.exit14
+
+ST_49: stg_271 [1/1] 0.00ns
+_ZN7_ap_sc_7sc_core4waitEi.exit12:0  call void @_ssdm_op_Write.ap_auto.floatP(float* %WBSlave_log_in, float %prob_load_1)
+
+ST_49: tmp_65 [7/7] 6.04ns
+_ZN7_ap_sc_7sc_core4waitEi.exit12:5  %tmp_65 = fmul float %prob_load_1, %temp_1
+
+
+ <State 50>: 6.04ns
+ST_50: tmp_65 [6/7] 6.04ns
+_ZN7_ap_sc_7sc_core4waitEi.exit12:5  %tmp_65 = fmul float %prob_load_1, %temp_1
+
+
+ <State 51>: 6.04ns
+ST_51: tmp_65 [5/7] 6.04ns
+_ZN7_ap_sc_7sc_core4waitEi.exit12:5  %tmp_65 = fmul float %prob_load_1, %temp_1
+
+
+ <State 52>: 6.04ns
+ST_52: tmp_65 [4/7] 6.04ns
+_ZN7_ap_sc_7sc_core4waitEi.exit12:5  %tmp_65 = fmul float %prob_load_1, %temp_1
+
+
+ <State 53>: 6.04ns
+ST_53: tmp_65 [3/7] 6.04ns
+_ZN7_ap_sc_7sc_core4waitEi.exit12:5  %tmp_65 = fmul float %prob_load_1, %temp_1
+
+
+ <State 54>: 6.04ns
+ST_54: tmp_65 [2/7] 6.04ns
+_ZN7_ap_sc_7sc_core4waitEi.exit12:5  %tmp_65 = fmul float %prob_load_1, %temp_1
+
+
+ <State 55>: 6.04ns
+ST_55: tmp_65 [1/7] 6.04ns
+_ZN7_ap_sc_7sc_core4waitEi.exit12:5  %tmp_65 = fmul float %prob_load_1, %temp_1
+
+
+ <State 56>: 8.25ns
+ST_56: Hs_2 [4/4] 8.25ns
+_ZN7_ap_sc_7sc_core4waitEi.exit12:6  %Hs_2 = fsub float %Hs, %tmp_65
+
+
+ <State 57>: 8.25ns
+ST_57: stg_280 [1/1] 0.00ns
+_ZN7_ap_sc_7sc_core4waitEi.exit12:1  call void (...)* @_ssdm_op_Wait(i32 1) nounwind
+
+ST_57: stg_281 [1/1] 0.00ns
+_ZN7_ap_sc_7sc_core4waitEi.exit12:2  call void (...)* @_ssdm_op_Poll(i1 %WBSlave_log_done_V_read)
+
+ST_57: Hs_2 [3/4] 8.25ns
+_ZN7_ap_sc_7sc_core4waitEi.exit12:6  %Hs_2 = fsub float %Hs, %tmp_65
+
+
+ <State 58>: 8.25ns
+ST_58: Hs_2 [2/4] 8.25ns
+_ZN7_ap_sc_7sc_core4waitEi.exit12:6  %Hs_2 = fsub float %Hs, %tmp_65
+
+
+ <State 59>: 8.25ns
+ST_59: stg_284 [1/1] 0.00ns
+_ZN7_ap_sc_7sc_core4waitEi.exit12:3  call void @_ssdm_op_Write.ap_auto.i1P(i1* %WBSlave_log_start_V, i1 false)
+
+ST_59: Hs_2 [1/4] 8.25ns
+_ZN7_ap_sc_7sc_core4waitEi.exit12:6  %Hs_2 = fsub float %Hs, %tmp_65
+
+
+ <State 60>: 1.54ns
+ST_60: stg_286 [1/1] 0.00ns
+_ZN7_ap_sc_7sc_core4waitEi.exit12:4  call void (...)* @_ssdm_op_Wait(i32 1) nounwind
+
+ST_60: stg_287 [1/1] 1.54ns
+_ZN7_ap_sc_7sc_core4waitEi.exit12:7  br label %_ZN7_ap_sc_7sc_core4waitEi.exit14
+
+
+ <State 61>: 0.00ns
+ST_61: Hs_1 [1/1] 0.00ns
+_ZN7_ap_sc_7sc_core4waitEi.exit14:0  %Hs_1 = phi float [ %Hs_2, %_ZN7_ap_sc_7sc_core4waitEi.exit12 ], [ %Hs, %3 ]
+
+ST_61: stg_289 [1/1] 0.00ns
+_ZN7_ap_sc_7sc_core4waitEi.exit14:1  call void (...)* @_ssdm_op_Wait(i32 1) nounwind
+
+ST_61: stg_290 [1/1] 0.00ns
+_ZN7_ap_sc_7sc_core4waitEi.exit14:2  br label %.preheader
+
+
+ <State 62>: 3.82ns
+ST_62: tmp_29 [2/3] 3.82ns
+:6  %tmp_29 = fcmp ogt float %Ps, 0.000000e+00
+
+ST_62: tmp_34 [2/3] 3.82ns
+:8  %tmp_34 = fcmp olt float %Ps, 1.000000e+00
+
+
+ <State 63>: 8.53ns
+ST_63: Ps_to_int [1/1] 0.00ns
+:0  %Ps_to_int = bitcast float %Ps to i32
+
+ST_63: tmp_26 [1/1] 0.00ns
+:1  %tmp_26 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %Ps_to_int, i32 23, i32 30)
+
+ST_63: tmp_45 [1/1] 0.00ns
+:2  %tmp_45 = trunc i32 %Ps_to_int to i23
+
+ST_63: notlhs1 [1/1] 1.87ns
+:3  %notlhs1 = icmp ne i8 %tmp_26, -1
+
+ST_63: notrhs1 [1/1] 2.08ns
+:4  %notrhs1 = icmp eq i23 %tmp_45, 0
+
+ST_63: tmp_28 [1/1] 0.92ns
+:5  %tmp_28 = or i1 %notrhs1, %notlhs1
+
+ST_63: tmp_29 [1/3] 3.82ns
+:6  %tmp_29 = fcmp ogt float %Ps, 0.000000e+00
+
+ST_63: tmp_30 [1/1] 0.92ns
+:7  %tmp_30 = and i1 %tmp_28, %tmp_29
+
+ST_63: tmp_34 [1/3] 3.82ns
+:8  %tmp_34 = fcmp olt float %Ps, 1.000000e+00
+
+ST_63: or_cond [1/1] 0.92ns
+:9  %or_cond = and i1 %tmp_30, %tmp_34
+
+ST_63: stg_303 [1/1] 0.00ns
+:10  br i1 %or_cond, label %_ZN7_ap_sc_7sc_core4waitEi.exit16, label %._crit_edge
+
+ST_63: tmp_51 [7/7] 6.04ns
+_ZN7_ap_sc_7sc_core4waitEi.exit16:0  %tmp_51 = fmul float %Ps, %Ps
+
+ST_63: tmp_52 [10/10] 8.53ns
+_ZN7_ap_sc_7sc_core4waitEi.exit16:8  %tmp_52 = fdiv float %Hs, %Ps
+
+ST_63: tmp_54 [4/4] 8.25ns
+_ZN7_ap_sc_7sc_core4waitEi.exit16:10  %tmp_54 = fsub float %Hn, %Hs
+
+ST_63: tmp_55 [4/4] 8.25ns
+_ZN7_ap_sc_7sc_core4waitEi.exit16:11  %tmp_55 = fsub float 1.000000e+00, %Ps
+
+
+ <State 64>: 8.53ns
+ST_64: tmp_51 [6/7] 6.04ns
+_ZN7_ap_sc_7sc_core4waitEi.exit16:0  %tmp_51 = fmul float %Ps, %Ps
+
+ST_64: tmp_52 [9/10] 8.53ns
+_ZN7_ap_sc_7sc_core4waitEi.exit16:8  %tmp_52 = fdiv float %Hs, %Ps
+
+ST_64: tmp_54 [3/4] 8.25ns
+_ZN7_ap_sc_7sc_core4waitEi.exit16:10  %tmp_54 = fsub float %Hn, %Hs
+
+ST_64: tmp_55 [3/4] 8.25ns
+_ZN7_ap_sc_7sc_core4waitEi.exit16:11  %tmp_55 = fsub float 1.000000e+00, %Ps
+
+
+ <State 65>: 8.53ns
+ST_65: tmp_51 [5/7] 6.04ns
+_ZN7_ap_sc_7sc_core4waitEi.exit16:0  %tmp_51 = fmul float %Ps, %Ps
+
+ST_65: tmp_52 [8/10] 8.53ns
+_ZN7_ap_sc_7sc_core4waitEi.exit16:8  %tmp_52 = fdiv float %Hs, %Ps
+
+ST_65: tmp_54 [2/4] 8.25ns
+_ZN7_ap_sc_7sc_core4waitEi.exit16:10  %tmp_54 = fsub float %Hn, %Hs
+
+ST_65: tmp_55 [2/4] 8.25ns
+_ZN7_ap_sc_7sc_core4waitEi.exit16:11  %tmp_55 = fsub float 1.000000e+00, %Ps
+
+
+ <State 66>: 8.53ns
+ST_66: tmp_51 [4/7] 6.04ns
+_ZN7_ap_sc_7sc_core4waitEi.exit16:0  %tmp_51 = fmul float %Ps, %Ps
+
+ST_66: tmp_52 [7/10] 8.53ns
+_ZN7_ap_sc_7sc_core4waitEi.exit16:8  %tmp_52 = fdiv float %Hs, %Ps
+
+ST_66: tmp_54 [1/4] 8.25ns
+_ZN7_ap_sc_7sc_core4waitEi.exit16:10  %tmp_54 = fsub float %Hn, %Hs
+
+ST_66: tmp_55 [1/4] 8.25ns
+_ZN7_ap_sc_7sc_core4waitEi.exit16:11  %tmp_55 = fsub float 1.000000e+00, %Ps
+
+
+ <State 67>: 8.53ns
+ST_67: tmp_51 [3/7] 6.04ns
+_ZN7_ap_sc_7sc_core4waitEi.exit16:0  %tmp_51 = fmul float %Ps, %Ps
+
+ST_67: tmp_52 [6/10] 8.53ns
+_ZN7_ap_sc_7sc_core4waitEi.exit16:8  %tmp_52 = fdiv float %Hs, %Ps
+
+ST_67: tmp_56 [10/10] 8.53ns
+_ZN7_ap_sc_7sc_core4waitEi.exit16:12  %tmp_56 = fdiv float %tmp_54, %tmp_55
+
+
+ <State 68>: 8.53ns
+ST_68: tmp_51 [2/7] 6.04ns
+_ZN7_ap_sc_7sc_core4waitEi.exit16:0  %tmp_51 = fmul float %Ps, %Ps
+
+ST_68: tmp_52 [5/10] 8.53ns
+_ZN7_ap_sc_7sc_core4waitEi.exit16:8  %tmp_52 = fdiv float %Hs, %Ps
+
+ST_68: tmp_56 [9/10] 8.53ns
+_ZN7_ap_sc_7sc_core4waitEi.exit16:12  %tmp_56 = fdiv float %tmp_54, %tmp_55
+
+
+ <State 69>: 8.53ns
+ST_69: tmp_51 [1/7] 6.04ns
+_ZN7_ap_sc_7sc_core4waitEi.exit16:0  %tmp_51 = fmul float %Ps, %Ps
+
+ST_69: tmp_52 [4/10] 8.53ns
+_ZN7_ap_sc_7sc_core4waitEi.exit16:8  %tmp_52 = fdiv float %Hs, %Ps
+
+ST_69: tmp_56 [8/10] 8.53ns
+_ZN7_ap_sc_7sc_core4waitEi.exit16:12  %tmp_56 = fdiv float %tmp_54, %tmp_55
+
+
+ <State 70>: 8.53ns
+ST_70: temp_2 [4/4] 8.25ns
+_ZN7_ap_sc_7sc_core4waitEi.exit16:1  %temp_2 = fsub float %Ps, %tmp_51
+
+ST_70: tmp_52 [3/10] 8.53ns
+_ZN7_ap_sc_7sc_core4waitEi.exit16:8  %tmp_52 = fdiv float %Hs, %Ps
+
+ST_70: tmp_56 [7/10] 8.53ns
+_ZN7_ap_sc_7sc_core4waitEi.exit16:12  %tmp_56 = fdiv float %tmp_54, %tmp_55
+
+
+ <State 71>: 8.53ns
+ST_71: temp_2 [3/4] 8.25ns
+_ZN7_ap_sc_7sc_core4waitEi.exit16:1  %temp_2 = fsub float %Ps, %tmp_51
+
+ST_71: tmp_52 [2/10] 8.53ns
+_ZN7_ap_sc_7sc_core4waitEi.exit16:8  %tmp_52 = fdiv float %Hs, %Ps
+
+ST_71: tmp_56 [6/10] 8.53ns
+_ZN7_ap_sc_7sc_core4waitEi.exit16:12  %tmp_56 = fdiv float %tmp_54, %tmp_55
+
+
+ <State 72>: 8.53ns
+ST_72: temp_2 [2/4] 8.25ns
+_ZN7_ap_sc_7sc_core4waitEi.exit16:1  %temp_2 = fsub float %Ps, %tmp_51
+
+ST_72: tmp_52 [1/10] 8.53ns
+_ZN7_ap_sc_7sc_core4waitEi.exit16:8  %tmp_52 = fdiv float %Hs, %Ps
+
+ST_72: tmp_56 [5/10] 8.53ns
+_ZN7_ap_sc_7sc_core4waitEi.exit16:12  %tmp_56 = fdiv float %tmp_54, %tmp_55
+
+
+ <State 73>: 8.53ns
+ST_73: temp_2 [1/4] 8.25ns
+_ZN7_ap_sc_7sc_core4waitEi.exit16:1  %temp_2 = fsub float %Ps, %tmp_51
+
+ST_73: stg_339 [1/1] 0.00ns
+_ZN7_ap_sc_7sc_core4waitEi.exit16:2  call void (...)* @_ssdm_op_Wait(i32 1) nounwind
+
+ST_73: stg_340 [1/1] 0.00ns
+_ZN7_ap_sc_7sc_core4waitEi.exit16:3  call void @_ssdm_op_Write.ap_auto.floatP(float* %WBSlave_log_in, float %temp_2)
+
+ST_73: tmp_53 [4/4] 8.25ns
+_ZN7_ap_sc_7sc_core4waitEi.exit16:9  %tmp_53 = fadd float %temp_1, %tmp_52
+
+ST_73: tmp_56 [4/10] 8.53ns
+_ZN7_ap_sc_7sc_core4waitEi.exit16:12  %tmp_56 = fdiv float %tmp_54, %tmp_55
+
+
+ <State 74>: 8.53ns
+ST_74: stg_343 [1/1] 0.00ns
+_ZN7_ap_sc_7sc_core4waitEi.exit16:4  call void (...)* @_ssdm_op_Wait(i32 1) nounwind
+
+ST_74: stg_344 [1/1] 0.00ns
+_ZN7_ap_sc_7sc_core4waitEi.exit16:5  call void (...)* @_ssdm_op_Poll(i1 %WBSlave_log_done_V_read)
+
+ST_74: tmp_53 [3/4] 8.25ns
+_ZN7_ap_sc_7sc_core4waitEi.exit16:9  %tmp_53 = fadd float %temp_1, %tmp_52
+
+ST_74: tmp_56 [3/10] 8.53ns
+_ZN7_ap_sc_7sc_core4waitEi.exit16:12  %tmp_56 = fdiv float %tmp_54, %tmp_55
+
+
+ <State 75>: 8.53ns
+ST_75: tmp_53 [2/4] 8.25ns
+_ZN7_ap_sc_7sc_core4waitEi.exit16:9  %tmp_53 = fadd float %temp_1, %tmp_52
+
+ST_75: tmp_56 [2/10] 8.53ns
+_ZN7_ap_sc_7sc_core4waitEi.exit16:12  %tmp_56 = fdiv float %tmp_54, %tmp_55
+
+
+ <State 76>: 8.53ns
+ST_76: tmp_53 [1/4] 8.25ns
+_ZN7_ap_sc_7sc_core4waitEi.exit16:9  %tmp_53 = fadd float %temp_1, %tmp_52
+
+ST_76: tmp_56 [1/10] 8.53ns
+_ZN7_ap_sc_7sc_core4waitEi.exit16:12  %tmp_56 = fdiv float %tmp_54, %tmp_55
+
+
+ <State 77>: 8.25ns
+ST_77: psi [4/4] 8.25ns
+_ZN7_ap_sc_7sc_core4waitEi.exit16:13  %psi = fadd float %tmp_53, %tmp_56
+
+
+ <State 78>: 8.25ns
+ST_78: stg_352 [1/1] 0.00ns
+_ZN7_ap_sc_7sc_core4waitEi.exit16:6  call void @_ssdm_op_Write.ap_auto.i1P(i1* %WBSlave_log_start_V, i1 false)
+
+ST_78: psi [3/4] 8.25ns
+_ZN7_ap_sc_7sc_core4waitEi.exit16:13  %psi = fadd float %tmp_53, %tmp_56
+
+
+ <State 79>: 8.25ns
+ST_79: stg_354 [1/1] 0.00ns
+_ZN7_ap_sc_7sc_core4waitEi.exit16:7  call void (...)* @_ssdm_op_Wait(i32 1) nounwind
+
+ST_79: psi [2/4] 8.25ns
+_ZN7_ap_sc_7sc_core4waitEi.exit16:13  %psi = fadd float %tmp_53, %tmp_56
+
+
+ <State 80>: 8.25ns
+ST_80: psi [1/4] 8.25ns
+_ZN7_ap_sc_7sc_core4waitEi.exit16:13  %psi = fadd float %tmp_53, %tmp_56
+
+ST_80: stg_357 [1/1] 0.00ns
+_ZN7_ap_sc_7sc_core4waitEi.exit16:14  call void (...)* @_ssdm_op_Wait(i32 1) nounwind
+
+ST_80: stg_358 [1/1] 0.00ns
+_ZN7_ap_sc_7sc_core4waitEi.exit16:15  store float %psi, float* %psiMax_3, align 4
+
+ST_80: stg_359 [1/1] 0.00ns
+_ZN7_ap_sc_7sc_core4waitEi.exit16:16  br label %._crit_edge
+
+
+ <State 81>: 3.82ns
+ST_81: psiMax_4 [1/1] 0.00ns
+._crit_edge:0  %psiMax_4 = load float* %psiMax_3, align 4
+
+ST_81: tmp_64 [3/3] 3.82ns
+._crit_edge:14  %tmp_64 = fcmp ogt float %psiMax_4, %psiMax
+
+
+ <State 82>: 3.82ns
+ST_82: tmp_64 [2/3] 3.82ns
+._crit_edge:14  %tmp_64 = fcmp ogt float %psiMax_4, %psiMax
+
+
+ <State 83>: 6.38ns
+ST_83: psiMax_2_to_int [1/1] 0.00ns
+._crit_edge:1  %psiMax_2_to_int = bitcast float %psiMax_4 to i32
+
+ST_83: tmp_57 [1/1] 0.00ns
+._crit_edge:2  %tmp_57 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %psiMax_2_to_int, i32 23, i32 30)
+
+ST_83: tmp_58 [1/1] 0.00ns
+._crit_edge:3  %tmp_58 = trunc i32 %psiMax_2_to_int to i23
+
+ST_83: psiMax_to_int [1/1] 0.00ns
+._crit_edge:4  %psiMax_to_int = bitcast float %psiMax to i32
+
+ST_83: tmp_59 [1/1] 0.00ns
+._crit_edge:5  %tmp_59 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %psiMax_to_int, i32 23, i32 30)
+
+ST_83: tmp_60 [1/1] 0.00ns
+._crit_edge:6  %tmp_60 = trunc i32 %psiMax_to_int to i23
+
+ST_83: notlhs3 [1/1] 1.87ns
+._crit_edge:7  %notlhs3 = icmp ne i8 %tmp_57, -1
+
+ST_83: notrhs4 [1/1] 2.08ns
+._crit_edge:8  %notrhs4 = icmp eq i23 %tmp_58, 0
+
+ST_83: tmp_61 [1/1] 0.92ns
+._crit_edge:9  %tmp_61 = or i1 %notrhs4, %notlhs3
+
+ST_83: notlhs4 [1/1] 1.87ns
+._crit_edge:10  %notlhs4 = icmp ne i8 %tmp_59, -1
+
+ST_83: notrhs5 [1/1] 2.08ns
+._crit_edge:11  %notrhs5 = icmp eq i23 %tmp_60, 0
+
+ST_83: tmp_62 [1/1] 0.92ns
+._crit_edge:12  %tmp_62 = or i1 %notrhs5, %notlhs4
+
+ST_83: tmp_63 [1/1] 0.92ns
+._crit_edge:13  %tmp_63 = and i1 %tmp_61, %tmp_62
+
+ST_83: tmp_64 [1/3] 3.82ns
+._crit_edge:14  %tmp_64 = fcmp ogt float %psiMax_4, %psiMax
+
+ST_83: tmp_66 [1/1] 0.92ns
+._crit_edge:15  %tmp_66 = and i1 %tmp_63, %tmp_64
+
+ST_83: stg_378 [1/1] 1.54ns
+._crit_edge:16  br i1 %tmp_66, label %_ZN7_ap_sc_7sc_core4waitEi.exit22, label %_ZN7_ap_sc_7sc_core4waitEi.exit10
+
+ST_83: stg_379 [1/1] 0.00ns
+_ZN7_ap_sc_7sc_core4waitEi.exit22:0  call void (...)* @_ssdm_op_Wait(i32 1) nounwind
+
+ST_83: stg_380 [1/1] 1.54ns
+_ZN7_ap_sc_7sc_core4waitEi.exit22:1  store i32 %thresh_3_cast2, i32* %thresh, align 4
+
+ST_83: stg_381 [1/1] 1.54ns
+_ZN7_ap_sc_7sc_core4waitEi.exit22:2  br label %_ZN7_ap_sc_7sc_core4waitEi.exit10
+
+ST_83: i_10 [1/1] 1.73ns
+_ZN7_ap_sc_7sc_core4waitEi.exit10:2  %i_10 = add i9 %thresh_1, 1
+
+
+ <State 84>: 0.00ns
+ST_84: psiMax_1 [1/1] 0.00ns
+_ZN7_ap_sc_7sc_core4waitEi.exit10:0  %psiMax_1 = phi float [ %psiMax_4, %_ZN7_ap_sc_7sc_core4waitEi.exit22 ], [ %psiMax, %._crit_edge ]
+
+ST_84: stg_384 [1/1] 0.00ns
+_ZN7_ap_sc_7sc_core4waitEi.exit10:1  call void (...)* @_ssdm_op_Wait(i32 1) nounwind
+
+ST_84: stg_385 [1/1] 0.00ns
+_ZN7_ap_sc_7sc_core4waitEi.exit10:3  br label %.preheader115
+
+
+ <State 85>: 4.78ns
+ST_85: WBSlave_regs_load_11 [1/2] 2.39ns
+_ZN7_ap_sc_7sc_core4waitEi.exit:5  %WBSlave_regs_load_11 = load i32* %WBSlave_regs_addr_5, align 4
+
+ST_85: tmp_41 [1/1] 0.00ns
+_ZN7_ap_sc_7sc_core4waitEi.exit:6  %tmp_41 = or i32 %WBSlave_regs_load_11, 1
+
+ST_85: stg_388 [1/1] 2.39ns
+_ZN7_ap_sc_7sc_core4waitEi.exit:7  store i32 %tmp_41, i32* %WBSlave_regs_addr_5, align 4
+
+
+ <State 86>: 2.39ns
+ST_86: stg_389 [1/1] 0.00ns
+_ZN7_ap_sc_7sc_core4waitEi.exit:8  call void (...)* @_ssdm_op_Wait(i32 1) nounwind
+
+ST_86: WBSlave_regs_load_12 [2/2] 2.39ns
+_ZN7_ap_sc_7sc_core4waitEi.exit:9  %WBSlave_regs_load_12 = load i32* %WBSlave_regs_addr, align 4
+
+
+ <State 87>: 4.39ns
+ST_87: WBSlave_regs_load_12 [1/2] 2.39ns
+_ZN7_ap_sc_7sc_core4waitEi.exit:9  %WBSlave_regs_load_12 = load i32* %WBSlave_regs_addr, align 4
+
+ST_87: tmp_42 [1/1] 2.00ns
+_ZN7_ap_sc_7sc_core4waitEi.exit:10  %tmp_42 = icmp eq i32 %WBSlave_regs_load_12, 0
+
+ST_87: stg_393 [1/1] 0.00ns
+_ZN7_ap_sc_7sc_core4waitEi.exit:11  call void (...)* @_ssdm_op_Poll(i1 %tmp_42)
+
+ST_87: stg_394 [1/1] 2.39ns
+_ZN7_ap_sc_7sc_core4waitEi.exit:12  store i32 0, i32* %WBSlave_regs_addr_5, align 4
+
+ST_87: stg_395 [1/1] 0.00ns
+_ZN7_ap_sc_7sc_core4waitEi.exit:13  call void (...)* @_ssdm_op_Wait(i32 1) nounwind
+
+ST_87: stg_396 [1/1] 0.00ns
+_ZN7_ap_sc_7sc_core4waitEi.exit:14  br label %_ZN7_ap_sc_7sc_core4waitEi.exit2
+
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+	State 41
+	State 42
+	State 43
+	State 44
+	State 45
+	State 46
+	State 47
+	State 48
+	State 49
+	State 50
+	State 51
+	State 52
+	State 53
+	State 54
+	State 55
+	State 56
+	State 57
+	State 58
+	State 59
+	State 60
+	State 61
+	State 62
+	State 63
+	State 64
+	State 65
+	State 66
+	State 67
+	State 68
+	State 69
+	State 70
+	State 71
+	State 72
+	State 73
+	State 74
+	State 75
+	State 76
+	State 77
+	State 78
+	State 79
+	State 80
+	State 81
+	State 82
+	State 83
+	State 84
+	State 85
+	State 86
+	State 87
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

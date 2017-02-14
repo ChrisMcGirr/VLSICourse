@@ -1,0 +1,60 @@
+Floating Point: Calculated threshold value (by Entropy method) = 165
+setup trace
+setup soc
+add traces
+start soc
+0 0 s
+WARNING: Default time step is used for VCD tracing.
+1 20 ns
+The image file is being read
+Finished Making the Historgram
+Printing the histogram
+Finsihed Printing the histogram
+Threshold is found to be 165
+Printing Threshold
+0xa5
+The image is being written back
+Number of Pixels are 1216
+Number of Incorrect Pixels are 0
+Percentage Error0
+\n\n
+Floating Point: Calculated threshold value (by Entropy method) = 118
+setup trace
+setup soc
+add traces
+start soc
+0 0 s
+WARNING: Default time step is used for VCD tracing.
+1 20 ns
+The image file is being read
+Finished Making the Historgram
+Printing the histogram
+Finsihed Printing the histogram
+Threshold is found to be 118
+Printing Threshold
+0x76
+The image is being written back
+Number of Pixels are 4096
+Number of Incorrect Pixels are 0
+Percentage Error0
+\n\n
+Floating Point: Calculated threshold value (by Entropy method) = 86
+setup trace
+setup soc
+add traces
+start soc
+0 0 s
+WARNING: Default time step is used for VCD tracing.
+1 20 ns
+The image file is being read
+Finished Making the Historgram
+Printing the histogram
+Finsihed Printing the histogram
+Threshold is found to be 86
+Printing Threshold
+0x56
+The image is being written back
+Number of Pixels are 4096
+Number of Incorrect Pixels are 0
+Percentage Error0
+\n\n
